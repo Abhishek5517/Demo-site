@@ -1,0 +1,184 @@
+@import url('./index.css');
+
+.sec2 {
+    display: flex;
+    padding: 70px;
+}
+
+/* Overview section */
+.sec2-overview {
+    width: 40%;
+    margin-top: 2em;
+    padding-left: 8%;
+    margin-left: 6%;
+    font-size: 1vw;
+}
+
+/* Carousel container */
+.sec2-carousel-cnt {
+    width: 40%;
+    margin-right: 15%;
+}
+
+/* Information text */
+.sec2-info {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    color: #666666;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Bullet points */
+.sec2-info li::marker {
+    color: #604280;
+    font-weight: bold;
+    display: inline-block;
+    width: 0.5em;
+    font-size: 25px;
+    margin-left: -0.6em;
+    vertical-align: sub;
+}
+
+/* Heading */
+.sec2-heading {
+    padding: 0px !important;
+    margin-bottom: 30px !important;
+    line-height: 48px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32pt !important;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Download button */
+.sec2-down-btn {
+    color: rgb(96, 66, 128);
+    font-weight: 800;
+    font-size: 16pt;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Brochure link */
+.full-brochure {
+    color: #5e3b9d;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    border-bottom: 2px solid #5e3b9d;
+    padding-bottom: 5px;
+}
+
+/* Apartment carousel */
+.sec-car-aparts {
+    width: 40%;
+    margin-left: 15%;
+}
+
+/* Apartment description */
+.sec-desc-aparts {
+    padding-left: 2em;
+    padding-top: 1em;
+}
+
+/* Responsive Media Queries */
+
+/* Small Screens (Up to 576px) */
+@media (max-width: 576px) {
+    .sec2 {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .sec2-overview,
+    .sec2-carousel-cnt,
+    .sec-car-aparts {
+        width: 100%;
+        margin: 0;
+        padding-left: 5%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sec2-info {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .sec2-heading {
+        font-size: 24pt !important;
+        line-height: 36px;
+    }
+
+    .sec2-down-btn {
+        font-size: 14pt;
+    }
+
+    .sec-desc-aparts {
+        padding: 1em;
+    }
+}
+
+/* Medium Screens (576px - 992px) */
+@media (max-width: 992px) {
+    .sec2 {
+        flex-direction: column;
+        padding: 50px;
+        align-items: center;
+    }
+
+    .sec2-overview,
+    .sec2-carousel-cnt,
+    .sec-car-aparts {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.2vw;
+    }
+
+    .sec2-info {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .sec2-heading {
+        font-size: 28pt !important;
+    }
+
+    .sec2-down-btn {
+        font-size: 15pt;
+    }
+
+    .sec-desc-aparts {
+        padding-left: 1.5em;
+    }
+}
+
+/* Large Screens (Above 992px) */
+@media (min-width: 992px) {
+    .sec2 {
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+
+    .sec2-overview {
+        font-size: 1vw;
+    }
+
+    .sec2-info {
+        font-size: 18px;
+    }
+
+    .sec2-heading {
+        font-size: 32pt !important;
+    }
+
+    .sec2-down-btn {
+        font-size: 16pt;
+    }
+}

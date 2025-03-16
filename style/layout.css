@@ -1,0 +1,44 @@
+.layouts-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+.tab-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.tab-links button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: gray;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.tab-links button.active {
+    color: purple;
+    border-bottom: 2px solid purple;
+}
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.carousel img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: purple;
+    cursor: pointer;
+}
+
+.layout-sec{
+    background-color: rgb(242, 242, 242);
+}

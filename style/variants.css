@@ -1,0 +1,75 @@
+.pricing-container {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 800px;
+    text-align: center;
+}
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.tab-menu a {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #777;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+.tab-menu a.active {
+    color: #5e3b9d;
+    border-bottom: 3px solid #5e3b9d;
+}
+.table-container {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+}
+.table thead th {
+    font-weight: bold;
+}
+.table tbody tr td {
+    vertical-align: middle;
+}
+.price-link {
+    color: #5e3b9d;
+    font-weight: bold;
+    text-decoration: none;
+}
+.table-container {
+    display: none;
+}
+.table-container.active {
+    display: block;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #777;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    color: #5e3b9d;
+    border-bottom: 3px solid #5e3b9d;
+}
+
+.var-sec{
+    padding: 2em;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+}
+
+table th {
+    background: #f2f2f2 !important;
+}
+tr td {
+    background: #f2f2f2 !important;
+}

@@ -1,0 +1,24 @@
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.register-hover:hover{
+    color: #428bca;
+}
+
+#intro1{
+    background-color: rgb(242, 242, 242);
+}
+
+#intro2{
+    background-color: white;
+}
