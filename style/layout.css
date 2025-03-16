@@ -1,6 +1,8 @@
 .layouts-container {
     text-align: center;
     padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .tab-links {
     display: flex;
@@ -25,20 +27,128 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    overflow: hidden;
+    position: relative;
+    padding: 0 40px;
+}
+.carousel-wrapper {
+    width: 100%;
+    max-width: 960px;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s ease-in-out;
 }
 .carousel img {
     width: 300px;
     height: auto;
     border-radius: 10px;
+    flex-shrink: 0;
 }
+
+/* Master plan image specific size */
+#master-plan-cnt img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
 .carousel-btn {
     background: none;
     border: none;
-    font-size: 24px;
-    color: purple;
     cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
 }
 
-.layout-sec{
+.carousel-btn .carousel-control-prev-icon,
+.carousel-btn .carousel-control-next-icon {
+    filter: invert(27%) sepia(51%) saturate(325%) hue-rotate(230deg) brightness(92%) contrast(87%);
+    width: 32px;
+    height: 32px;
+}
+
+.carousel-btn:hover .carousel-control-prev-icon,
+.carousel-btn:hover .carousel-control-next-icon {
+    filter: invert(27%) sepia(51%) saturate(425%) hue-rotate(230deg) brightness(82%) contrast(87%);
+}
+
+/* Partners section specific styles */
+.partners-carousel-container .carousel-btn {
+    background: none;
+    border: none;
+}
+
+.partners-carousel-container .carousel-btn .carousel-control-prev-icon,
+.partners-carousel-container .carousel-btn .carousel-control-next-icon {
+    filter: invert(27%) sepia(51%) saturate(325%) hue-rotate(230deg) brightness(92%) contrast(87%);
+    width: 32px;
+    height: 32px;
+}
+
+.partners-carousel-container .carousel-btn:hover .carousel-control-prev-icon,
+.partners-carousel-container .carousel-btn:hover .carousel-control-next-icon {
+    filter: invert(27%) sepia(51%) saturate(425%) hue-rotate(230deg) brightness(82%) contrast(87%);
+}
+
+#c1-prev, #c2-prev {
+    left: 0;
+}
+
+#c1-next, #c2-next {
+    right: 0;
+}
+
+.layout-sec {
     background-color: rgb(242, 242, 242);
+    padding: 40px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        max-width: 320px;
+    }
+    
+    .carousel img, #master-plan-cnt img {
+        width: 280px;
+    }
+    
+    .carousel-btn {
+        font-size: 28px;
+    }
+
+    .carousel-container {
+        padding: 0 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        max-width: 280px;
+    }
+    
+    .carousel img, #master-plan-cnt img {
+        width: 240px;
+    }
+
+    .carousel-container {
+        padding: 0 30px;
+    }
+
+    .carousel-btn {
+        font-size: 24px;
+    }
 }
