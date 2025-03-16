@@ -784,25 +784,37 @@
                 <button id="mas-plan-btn" onclick="switchTab(this)">MASTER PLAN</button>
             </div>
             <div id="towerA-plan-cnt" class="carousel-container layout-plan">
-                <button id="c1-prev" class="carousel-btn" onclick="prevSlide(this)">&#8592;</button>
-                <div id="carousel1" class="carousel d-flex gap-3">
-                    <img src="./assets/towerA1.png" alt="Plan 1">
-                    <img src="./assets/towerA2.png" alt="Plan 2">
-                    <img src="./assets/towerA3.png" alt="Plan 3">
-                    <img src="./assets/towerA4.png" alt="Plan 4">
-                    <img src="./assets/towerA5.png" alt="Plan 5">
+                <button id="c1-prev" class="carousel-btn" onclick="prevLayoutSlide(this)">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <div id="carousel1" class="carousel-wrapper">
+                    <div class="carousel d-flex">
+                        <img src="./assets/towerA1.png" alt="Plan 1">
+                        <img src="./assets/towerA2.png" alt="Plan 2">
+                        <img src="./assets/towerA3.png" alt="Plan 3">
+                        <img src="./assets/towerA4.png" alt="Plan 4">
+                        <img src="./assets/towerA5.png" alt="Plan 5">
+                    </div>
                 </div>
-                <button id="c1-next" class="carousel-btn" onclick="nextSlide(this)">&#8594;</button>
+                <button id="c1-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
             <div id="towerB-plan-cnt" class="carousel-container layout-plan">
-                <button id="c2-prev" class="carousel-btn" onclick="prevSlide(this)">&#8592;</button>
-                <div id="carousel2" class="carousel d-flex gap-3">
-                    <img src="./assets/towerB1.png" alt="Plan 1">
-                    <img src="./assets/towerB2.png" alt="Plan 2">
-                    <img src="./assets/towerB3.png" alt="Plan 3">
-                    <img src="./assets/towerB4.png" alt="Plan 4">
+                <button id="c2-prev" class="carousel-btn" onclick="prevLayoutSlide(this)">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <div id="carousel2" class="carousel-wrapper">
+                    <div class="carousel d-flex">
+                        <img src="./assets/towerB1.png" alt="Plan 1">
+                        <img src="./assets/towerB2.png" alt="Plan 2">
+                        <img src="./assets/towerB3.png" alt="Plan 3">
+                        <img src="./assets/towerB4.png" alt="Plan 4">
+                    </div>
                 </div>
-                <button id="c2-next" class="carousel-btn" onclick="nextSlide(this)">&#8594;</button>
+                <button id="c2-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
             <div id="master-plan-cnt" class="carousel-container layout-plan">
                 <img src="./assets/mas-plan.png" alt="mas-plan">
@@ -933,7 +945,9 @@
             </p>
             
             <div class="partners-carousel-container">
-                <button class="carousel-btn prev-btn" onclick="prevPartners()">&#8592;</button>
+                <button class="carousel-btn prev-btn" onclick="prevPartners()">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
                 <div class="partners-carousel">
                     <div class="partner-card">
                         <h3>Lead Architect</h3>
@@ -965,7 +979,9 @@
                     </div>
                    
                 </div>
-                <button class="carousel-btn next-btn" onclick="nextPartners()">&#8594;</button>
+                <button class="carousel-btn next-btn" onclick="nextPartners()">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
             </div>
         </div>
     </section>
@@ -1159,7 +1175,6 @@
 
 
     <script>
-
         function showTable(event, tableId) {
             event.preventDefault();
             document.querySelectorAll('.table-container').forEach(table => table.classList.remove('active'));
@@ -1167,196 +1182,221 @@
             document.querySelectorAll('.tab-menu button').forEach(tab => tab.classList.remove('active'));
             event.target.classList.add('active');
         }
-        let index = 0;
-        const slide1 = document.querySelectorAll('#carousel1 img');
-        const slide2 = document.querySelectorAll('#carousel2 img')
-        let slides = slide1 ; 
-        function showSlide(index) {
-           
-            let showEle = [];
-            for (let i = index; i <= index + 2; i++) {
-                if (i < slides.length) {
-                    showEle.push(i);
+
+        // Layout carousel functionality
+        let layoutCurrentSlide = 0;
+        const layoutSlidesToShow = 3;
+
+        function initializeLayoutCarousels() {
+            const carousels = document.querySelectorAll('.layout-plan .carousel');
+            carousels.forEach(carousel => {
+                const slides = carousel.querySelectorAll('img');
+                if (slides.length <= 1) {
+                    const container = carousel.closest('.carousel-container');
+                    const buttons = container.querySelectorAll('.carousel-btn');
+                    buttons.forEach(btn => btn.style.display = 'none');
                 }
-                else {
-                    let nextEle = i - slides.length;
-                    showEle.push(nextEle);
+                
+                // Clone slides for infinite scroll
+                if (slides.length > 1) {
+                    const originalSlides = Array.from(slides);
+                    originalSlides.forEach(slide => {
+                        const clone = slide.cloneNode(true);
+                        carousel.appendChild(clone);
+                    });
                 }
-            }
-            for (let i = 0; i < slides.length; i++) {
-                if (showEle.includes(i)) {
-                    slides[i].style.display = 'block';
-                }
-                else {
-                    slides[i].style.display = 'none';
-                }
-            }
+            });
         }
 
+        function showLayoutSlide(carousel, index) {
+            const slides = carousel.querySelectorAll('img');
+            const totalSlides = slides.length / 2; // Account for cloned slides
+            
+            if (slides.length <= 1) return;
 
-        function prevSlide(element) {
-            if( element.getAttribute('id') == 'c2-next' || element.getAttribute('id') == 'c2-prev' )
-            slides = slide2 ;  
-            index = (index > 0) ? index - 1 : slides.length - 1;
-            showSlide(index);
+            const slideWidth = slides[0].offsetWidth;
+            const gap = 16; // Matches the gap class
+            
+            let translateX = -(index * (slideWidth + gap));
+            
+            // Reset position when reaching the cloned slides
+            if (index >= totalSlides) {
+                index = 0;
+                translateX = 0;
+                layoutCurrentSlide = 0;
+            } else if (index < 0) {
+                index = totalSlides - 1;
+                translateX = -(index * (slideWidth + gap));
+                layoutCurrentSlide = index;
+            }
+            
+            carousel.style.transform = `translateX(${translateX}px)`;
+            carousel.style.transition = 'transform 0.5s ease-in-out';
         }
-        function nextSlide(element) {
-            if( element.getAttribute('id') == 'c2-next' || element.getAttribute('id') == 'c2-prev' )
-                slides = slide2 ;  
-            index = (index < slides.length - 1) ? index + 1 : 0;
-            showSlide(index);
+
+        function prevLayoutSlide(element) {
+            const carouselId = element.id.includes('c1') ? 'carousel1' : 'carousel2';
+            const carousel = document.querySelector(`#${carouselId} .carousel`);
+            layoutCurrentSlide--;
+            showLayoutSlide(carousel, layoutCurrentSlide);
         }
+
+        function nextLayoutSlide(element) {
+            const carouselId = element.id.includes('c1') ? 'carousel1' : 'carousel2';
+            const carousel = document.querySelector(`#${carouselId} .carousel`);
+            layoutCurrentSlide++;
+            showLayoutSlide(carousel, layoutCurrentSlide);
+        }
+
         function switchTab(element) {
             document.querySelectorAll('.tab-links button').forEach(btn => btn.classList.remove('active'));
             element.classList.add('active');
-            let planCont = document.querySelectorAll('div .layout-plan') ;
-            console.log(element.getAttribute('id'));
-            let displayProp = [];
-            for( let i = 0 ; i < planCont.length ; i++ ){
-                 displayProp.push(planCont[i].style);
+            const planCont = document.querySelectorAll('div .layout-plan');
+            
+            if (element.id === "towerA-btn") {
+                planCont[0].style.display = "flex";
+                planCont[1].style.display = "none";
+                planCont[2].style.display = "none";
+                layoutCurrentSlide = 0;
+                showLayoutSlide(document.querySelector('#carousel1 .carousel'), layoutCurrentSlide);
+            } else if (element.id === "towerB-btn") {
+                planCont[0].style.display = "none";
+                planCont[1].style.display = "flex";
+                planCont[2].style.display = "none";
+                layoutCurrentSlide = 0;
+                showLayoutSlide(document.querySelector('#carousel2 .carousel'), layoutCurrentSlide);
+            } else if (element.id === "mas-plan-btn") {
+                planCont[0].style.display = "none";
+                planCont[1].style.display = "none";
+                planCont[2].style.display = "flex";
             }
-            console.log(displayProp);
-            if (element.getAttribute('id') == "towerA-btn") {
-                planCont[0].style.display="flex" ;
-                planCont[1].style.display="none"  ;
-                planCont[2].style.display="none"  ;
-                 
-            }else if (element.getAttribute('id') == "towerB-btn") {
-                planCont[0].style.display="none" ;
-                planCont[1].style.display="flex" ;
-                planCont[2].style.display="none"  ;
-
-            }else if (element.getAttribute('id') == "mas-plan-btn") {
-                planCont[0].style.display="none"  ;
-                planCont[1].style.display="none"  ;
-                planCont[2].style.display="flex" ;
-            }
-           
         }
-        let ele = document.getElementById("towerA-btn") ;
-        switchTab(ele) ;
-        showSlide(index);
 
-        // Initialize the carousel
-        showSlide(0);
+        // Initialize layout carousels and handle transitions
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeLayoutCarousels();
+            const ele = document.getElementById("towerA-btn");
+            switchTab(ele);
 
-      // Initialize the carousel
-      showSlide(0);
+            // Handle infinite scroll transitions
+            document.querySelectorAll('.layout-plan .carousel').forEach(carousel => {
+                carousel.addEventListener('transitionend', () => {
+                    const slides = carousel.querySelectorAll('img');
+                    if (layoutCurrentSlide >= slides.length / 2) {
+                        carousel.style.transition = 'none';
+                        layoutCurrentSlide = 0;
+                        showLayoutSlide(carousel, layoutCurrentSlide);
+                        setTimeout(() => {
+                            carousel.style.transition = 'transform 0.5s ease-in-out';
+                        }, 50);
+                    } else if (layoutCurrentSlide < 0) {
+                        carousel.style.transition = 'none';
+                        layoutCurrentSlide = slides.length / 2 - 1;
+                        showLayoutSlide(carousel, layoutCurrentSlide);
+                        setTimeout(() => {
+                            carousel.style.transition = 'transform 0.5s ease-in-out';
+                        }, 50);
+                    }
+                });
+            });
+        });
 
-// Partners carousel functionality
-let partnersIndex = 0;
-const partnersCarousel = document.querySelector('.partners-carousel');
-const partnerCards = document.querySelectorAll('.partner-card');
-const totalPartners = partnerCards.length;
-let isTransitioning = false;
+        // Update layout carousels on window resize
+        let layoutResizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(layoutResizeTimeout);
+            layoutResizeTimeout = setTimeout(() => {
+                const activeCarousel = document.querySelector('.layout-plan[style*="flex"] .carousel');
+                if (activeCarousel) {
+                    showLayoutSlide(activeCarousel, layoutCurrentSlide);
+                }
+            }, 250);
+        });
 
-function getVisibleCards() {
-    if (window.innerWidth <= 576) return 1;
-    if (window.innerWidth <= 992) return 2;
-    return 3;
-}
+        // Partners carousel functionality
+        let partnersIndex = 0;
+        const partnersCarousel = document.querySelector('.partners-carousel');
+        const partnerCards = document.querySelectorAll('.partner-card');
+        const totalPartners = partnerCards.length;
+        let isTransitioning = false;
 
-function cloneCards() {
-    // Clone first and last cards for smooth infinite scroll
-    partnerCards.forEach(card => {
-        const clone = card.cloneNode(true);
-        partnersCarousel.appendChild(clone);
-    });
-    partnerCards.forEach(card => {
-        const clone = card.cloneNode(true);
-        partnersCarousel.insertBefore(clone, partnersCarousel.firstChild);
-    });
-}
+        function getVisibleCards() {
+            if (window.innerWidth <= 576) return 1;
+            if (window.innerWidth <= 992) return 2;
+            return 3;
+        }
 
-function showPartners(index, smooth = true) {
-    if (isTransitioning) return;
-    const visibleCards = getVisibleCards();
-    
-    // Calculate the translation considering the cloned cards
-    let translateX = -(index + totalPartners) * (100 / visibleCards);
-    
-    if (!smooth) {
-        partnersCarousel.style.transition = 'none';
-    } else {
-        partnersCarousel.style.transition = 'transform 0.5s ease';
-    }
-    
-    partnersCarousel.style.transform = `translateX(${translateX}%)`;
-    partnersIndex = index;
+        function cloneCards() {
+            // Clone first and last cards for smooth infinite scroll
+            partnerCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                partnersCarousel.appendChild(clone);
+            });
+            partnerCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                partnersCarousel.insertBefore(clone, partnersCarousel.firstChild);
+            });
+        }
 
-    if (smooth) {
-        isTransitioning = true;
-        setTimeout(() => {
-            isTransitioning = false;
-            // Reset position if we've reached the cloned cards
-            if (index >= totalPartners) {
-                showPartners(0, false);
-            } else if (index < 0) {
-                showPartners(totalPartners - 1, false);
+        function showPartners(index, smooth = true) {
+            if (isTransitioning) return;
+            const visibleCards = getVisibleCards();
+            
+            // Calculate the translation considering the cloned cards
+            let translateX = -(index + totalPartners) * (100 / visibleCards);
+            
+            if (!smooth) {
+                partnersCarousel.style.transition = 'none';
+            } else {
+                partnersCarousel.style.transition = 'transform 0.5s ease';
             }
-        }, 500);
-    }
-}
+            
+            partnersCarousel.style.transform = `translateX(${translateX}%)`;
+            partnersIndex = index;
 
-function prevPartners() {
-    if (!isTransitioning) {
-        showPartners(partnersIndex - 1);
-    }
-}
+            if (smooth) {
+                isTransitioning = true;
+                setTimeout(() => {
+                    isTransitioning = false;
+                    // Reset position if we've reached the cloned cards
+                    if (index >= totalPartners) {
+                        showPartners(0, false);
+                    } else if (index < 0) {
+                        showPartners(totalPartners - 1, false);
+                    }
+                }, 500);
+            }
+        }
 
-function nextPartners() {
-    if (!isTransitioning) {
-        showPartners(partnersIndex + 1);
-    }
-}
+        function prevPartners() {
+            if (!isTransitioning) {
+                showPartners(partnersIndex - 1);
+            }
+        }
 
-// Initialize partners carousel
-cloneCards();
-showPartners(0, false);
+        function nextPartners() {
+            if (!isTransitioning) {
+                showPartners(partnersIndex + 1);
+            }
+        }
 
-// Update carousel on window resize
-let resizeTimeout;
-window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(() => {
-        showPartners(partnersIndex, false);
-    }, 250);
-});
+        // Initialize partners carousel
+        cloneCards();
+        showPartners(0, false);
 
-// Add transition end listener
-partnersCarousel.addEventListener('transitionend', () => {
-    isTransitioning = false;
-});
+        // Update carousel on window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                showPartners(partnersIndex, false);
+            }, 250);
+        });
 
-// // Partner modal content handler
-// document.addEventListener('DOMContentLoaded', function() {
-//     const partnerModal = document.getElementById('partnerModal');
-//     const modalTitle = partnerModal.querySelector('.modal-title');
-//     const modalContent = partnerModal.querySelector('.partner-modal-content');
-//     const modalImage = partnerModal.querySelector('.modal-project-image');
-
-//     partnerModal.addEventListener('show.bs.modal', function(event) {
-//         const button = event.relatedTarget;
-//         const partner = button.getAttribute('data-partner');
-        
-//         // Update modal content based on partner
-//         switch(partner) {
-//             case 'wadhwa':
-//                 modalTitle.textContent = 'THE WADHWA COURTYARD';
-//                 modalImage.src = './assets/courtyard-img.jpg';
-//                 break;
-//             case 'waho':
-//                 modalTitle.textContent = 'WAHO ARCHITECTS';
-//                 modalImage.src = './assets/waho-project.jpg';
-//                 break;
-//             case 'kapadia':
-//                 modalTitle.textContent = 'KAPADIA ASSOCIATES';
-//                 modalImage.src = './assets/kapadia-project.jpg';
-//                 break;
-//             // Add cases for other partners as needed
-//         }
-//     });
-// });
+        // Add transition end listener
+        partnersCarousel.addEventListener('transitionend', () => {
+            isTransitioning = false;
+        });
     </script>
 </body>
 
