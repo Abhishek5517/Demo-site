@@ -172,6 +172,9 @@
         padding: 5px 20px;
         position: fixed;
     }
+#nav-call-btn{
+        display: none;
+    }
 
     .CTA-btn {
         width: 50%;

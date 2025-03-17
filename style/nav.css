@@ -10,6 +10,8 @@
 
 .call-now-cnt {
     margin-top: -12px;
+    position: relative;
+    left: 60%;
     border-bottom: 4px solid #604280;
     border-radius: 0px;
     padding-right: 0px;

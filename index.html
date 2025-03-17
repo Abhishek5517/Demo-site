@@ -325,10 +325,11 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"></a>
-                        <div class="para-logo call-now-cnt register-hover" data-bs-toggle="modal"
+                        <div id="nav-call-btn" class="para-logo call-now-cnt register-hover" data-bs-toggle="modal"
                             data-bs-target="#registerModal">
                             <i class="fa-sharp fa-solid fa-phone" style="display:block;"></i>
-                            <span style="padding-bottom: 6px;">CALL NOW</span>
+                            <span style="    padding-bottom: 6px;
+    margin-left: 8px;">CALL NOW</span>
                         </div>
                     </li>
                 </ul>
@@ -1211,7 +1212,7 @@
     </footer>
 
     <div class="mob-view" >
-        <div class="para-logo call-now-cnt register-hover CTA-btn" data-bs-toggle="modal"
+        <div class="para-logo register-hover CTA-btn" data-bs-toggle="modal"
         data-bs-target="#registerModal" style="width: 50%; border-right: 1px solid #fff; padding :5px">
         <i class="fa-sharp fa-solid fa-phone" style="display:block;"></i>
         <span style="margin-left: 5px;">CALL NOW</span>
@@ -1284,9 +1285,22 @@
                 translateX = -(index * (slideWidth + gap));
                 layoutCurrentSlide = index;
             }
-            slides.forEach((slide,idx)=>{
+            if( window.innerWidth <= "768"){
+            
+                slides.forEach((slide,idx)=>{
+                    slide.style.display = (idx == layoutCurrentSlide  ) ? "block" : "none" ;
+                });  
+            }else if(window.innerWidth > "768" && window.innerWidth <= "992"){
+                slides.forEach((slide,idx)=>{
+                    slide.style.display = (idx >= layoutCurrentSlide && idx <= layoutCurrentSlide + 1 ) ? "block" : "none" ;
+                });
+            }else if(window.innerWidth > "992" ){
+                slides.forEach((slide,idx)=>{
                     slide.style.display = (idx >= layoutCurrentSlide && idx <= layoutCurrentSlide + 2 ) ? "block" : "none" ;
                 });
+            }
+            
+            
             // carousel.style.transform = `translateX(${translateX}px)`;
             carousel.style.transition = 'transform 0.5s ease-in-out';
         }
