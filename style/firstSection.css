@@ -1,3 +1,5 @@
+@import url('./index.css');
+
 #first-section {
     display: flex;
     overflow: hidden;
@@ -6,7 +8,7 @@
 
 .first-section-img {
     max-width: 100%;
-    height: auto;
+
     width: 100%;
 }
 
@@ -92,6 +94,12 @@
     font-size: 1vw;
 }
 
+#seperator{
+    width:2px;
+    height:auto;
+    border: 3px solid #604280 ;
+}
+
 .feature-border {
     padding-left: 0px !important;
     border-right: 3px solid #604280;
@@ -108,6 +116,7 @@
 @media (max-width: 576px) {
     #first-section {
         flex-direction: column;
+        flex-wrap: wrap;
         text-align: center;
     }
 
@@ -143,8 +152,16 @@
 
 /* Medium Screens (576px - 992px) */
 @media (max-width: 992px) {
+    #first-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+       
+    }
     .first-section-img-cnt {
-        width: 80%;
+        width: 100%;
     }
 
     .title {

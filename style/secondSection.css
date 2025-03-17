@@ -11,7 +11,7 @@
     margin-top: 2em;
     padding-left: 8%;
     margin-left: 6%;
-    font-size: 1vw;
+   
 }
 
 /* Carousel container */
@@ -22,7 +22,7 @@
 
 /* Information text */
 .sec2-info {
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: 500;
     line-height: 35px;
     color: #666666;
@@ -72,6 +72,7 @@
     margin-top: 15px;
     border-bottom: 2px solid #5e3b9d;
     padding-bottom: 5px;
+    font-size: 1.2vw;
 }
 
 /* Apartment carousel */
