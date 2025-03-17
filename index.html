@@ -380,7 +380,41 @@
 
         <div class="sec2-overview">
             <h1 class="sec2-heading"> OVERVIEW</h1>
-            <br>
+          
+            <div id="sec2-car" class="carousel slide mob-car">
+                <br>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/s2-car-img1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/s2-car-img2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/s2-car-img3.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/s2-car-img4.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#sec2-car" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sec2-car" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <br>
+            </div>
+           
             <ul class="sec2-info">
                 <li>Presenting A Life Beyond Comparison</li>
                 <li>7 Exquisite Towers Spread Across 6 Acres</li>
@@ -391,15 +425,16 @@
                 <li>Lifestyle Choice For An Evolved Customer</li>
             </ul>
             <br>
-            <span>
+            <span >
                 <a href="#" class="full-brochure">FULL BROCHURE
                     <img src="./assets/sec2-download-btn.png" width="22" style="vertical-align: sub;" alt="Asteria"
                         class="changeicon">
                 </a>
             </span>
         </div>
-        <div class="sec2-carousel-cnt col-lg-6 col-xs-12">
-            <div id="sec2-car" class="carousel slide">
+        <div class="sec2-carousel-cnt sec-desc-aparts">
+            <br>
+            <div id="sec2-car" class="carousel slide web-car">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="0" class="active"
                         aria-current="true"></button>
@@ -431,13 +466,18 @@
                 </button>
             </div>
         </div>
+     
     </section>
 
     <section id="location" class="sec-loc">
         <div class="sec2-overview loc-sec-info">
             <h1 class="sec2-heading"> LOCATION</h1>
+            
+            <div class="loc-sec-img-cnt mob-car" style="">
+                <br>
+                <img src="./assets/location-img.png" class="loc-sec-img">
+            </div>
             <br>
-
             <ul class="sec2-info">
                 <li>
                     Off Vasant Vihar on Pokhran Road 2, Thane
@@ -472,13 +512,13 @@
 
             </p>
         </div>
-        <div class="loc-sec-img-cnt" style="">
+        <div class="loc-sec-img-cnt web-car" style="">
             <img src="./assets/location-img.png" class="loc-sec-img">
         </div>
     </section>
 
     <section id="apartments" class="sec2">
-        <div class="sec-car-aparts">
+        <div class="sec-car-aparts web-car">
             <div id="aparts-car" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#aparts-car" data-bs-slide-to="0" class="active"
@@ -508,8 +548,36 @@
         </div>
 
         <div class="sec-desc-aparts">
-            <h1 class="sec2-heading"> APARTMENTS</h1>
-            <br>
+            <h1 class="sec2-heading">APARTMENTS</h1>
+            <div class="sec-car-aparts mob-car">
+                <br>
+                <div id="aparts-car" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#aparts-car" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#aparts-car" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+    
+    
+                    </div>
+                    <div class="carousel-inner" style="border-radius: 14px;">
+                        <div class="carousel-item active">
+                            <img src="./assets/aparts-img1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/aparts-img2.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#aparts-car" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#aparts-car" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
             <ul class="sec2-info">
                 <li>
                     Cross Ventilated & Naturally Lit Homes
@@ -550,7 +618,59 @@
     <section id="amenities" class="sec-loc">
         <div class="sec2-overview" style="margin-top: 2em;">
             <h1 class="sec2-heading"> AMENITIES</h1>
-            <br>
+          
+            <div class="sec2-carousel-cnt mob-car">
+                <br>
+                <div id="amn-car" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                        <button type="button" data-bs-target="#amn-car" data-bs-slide-to="7" aria-label="Slide 8"></button>
+    
+    
+                    </div>
+                    <div class="carousel-inner" style="border-radius: 14px;">
+                        <div class="carousel-item active">
+                            <img src="./assets/amn1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn3.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn4.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn5.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn6.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn7.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/amn8.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#amn-car" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#amn-car" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
             <ul class="sec2-info">
                 <li>
                     Total Amenities Area of 54,000 sq ft
@@ -586,7 +706,7 @@
 
             </p>
         </div>
-        <div class="sec2-carousel-cnt">
+        <div class="sec2-carousel-cnt web-car">
             <div id="amn-car" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#amn-car" data-bs-slide-to="0" class="active"
@@ -888,7 +1008,7 @@
 
 
     <section id="intro1" class="sec2">
-        <div class="sec-car-aparts">
+        <div class="sec-car-aparts web-car">
             <div id="aparts-car">
                 <img src="./assets/intro1.png" style="border-radius: 14px;" class="d-block w-100" alt="huihui">
             </div>
@@ -896,8 +1016,14 @@
 
         <div class="sec-desc-aparts">
             <h1 class="sec2-heading"> NARANG REALITY</h1>
-            <br>
-
+            
+            <div class="sec-car-aparts mob-car">
+                <br>
+                <div id="aparts-car">
+                    <img src="./assets/intro1.png" style="border-radius: 14px;" class="d-block w-100" alt="huihui">
+                </div>
+                <br>
+            </div>
 
             <ul class="sec2-info">
                 <li>
@@ -936,9 +1062,15 @@
 
     <section id="intro2">
         <div class="sec2-overview">
-            <h1 class="sec2-heading"> WADHWA GROUP</h1>
-            <br>
-
+            <h1 class="sec2-heading">WADHWA GROUP</h1>
+            
+            <div class="sec2-carousel-cnt mob-car">
+                <br>
+                <div id="amn-car">
+                    <img src="./assets/intro2.png" alt="Wadhwa Group">
+                </div>
+                <br>
+            </div>
             <ul class="sec2-info">
                 <li>
                     One of Mumbai's Leading Real Estate Players </li>
@@ -970,7 +1102,7 @@
 
             </p>
         </div>
-        <div class="sec2-carousel-cnt">
+        <div class="sec2-carousel-cnt web-car">
             <div id="amn-car">
                 <img src="./assets/intro2.png" alt="Wadhwa Group">
             </div>

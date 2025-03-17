@@ -45,7 +45,7 @@
 }
 
 #intro2 .sec2-heading {
-    text-align: left;
+    text-align: center;
 }
 
 #intro2 .sec2-info {
@@ -135,7 +135,7 @@
 @media screen and (max-width: 576px) {
     #intro1,
     #intro2 {
-        padding: 20px;
+        padding: 50px;
     }
 
     #intro1 .sec2-heading,
