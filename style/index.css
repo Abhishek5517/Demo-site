@@ -9,11 +9,11 @@
     }
 }
 
-.register-hover:hover{
+.register-hover:hover {
     color: #428bca;
 }
 
-#intro1{
+#intro1 {
     background-color: rgb(242, 242, 242);
     display: flex;
     flex-direction: row;
@@ -77,7 +77,7 @@
     vertical-align: middle;
 }
 
-.WA-redirect{
+.WA-redirect {
     border-radius: 50%;
     position: fixed;
     right: 20px;
@@ -91,7 +91,7 @@
 }
 
 .WA-redirect:hover {
-   cursor: pointer;
+    cursor: pointer;
 }
 
 /* Responsive styles for intro sections */
@@ -149,4 +149,41 @@
     }
 }
 
+/* Mobile-specific styles */
+.mob-view {
+    display: none;
+}
 
+@media (max-width: 600px) {
+    .mob-view {
+        text-align: center;
+        display: flex;
+        border-top: 1px solid #fff;
+        transition: all 0.3s ease-in-out 0s;
+        z-index: 1000;
+        width: 100%;
+        background-color: #604280;
+        border-radius: 0;
+        bottom: 0;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 20px;
+        position: fixed;
+    }
+
+    .CTA-btn {
+        width: 50%;
+        display: flex;
+        padding: 5px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+    }
+
+    .WA-redirect {
+        display: none;
+    }
+}

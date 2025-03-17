@@ -296,7 +296,7 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img id="logoImg" src="./assets/logo.png" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -348,16 +348,18 @@
                 </div>
                 <div class="features">
 
-                    <div class="col-lg-4 col-xs-4 feature-border fadeInUp" data-animation="fadeInUp"
+                    <div class="col-lg-3 col-xs-4 fadeInUp" data-animation="fadeInUp"
                         data-animation-delay="500"
                         style="padding-right: 0px !important; visibility: visible; animation-name: fadeInUp;">
                         <span class="feature-name">Prime<br> Location<br>
                         </span>
                     </div>
-                    <div class="col-lg-4 col-xs-4 feature-border fadeInUp">
+                    <div id="seperator"></div>
+                    <div class="col-lg-3 col-xs-4  fadeInUp">
                         <span class="feature-name"> Luxury <br>Apartments<br> </span>
                     </div>
-                    <div class="col-lg-4 col-xs-4 fadeInUp">
+                    <div id="seperator"></div>
+                    <div class="col-lg-3 col-xs-4 fadeInUp">
                         <span class="feature-name">A Majestic<br>Clubhouse<br></span>
 
                     </div>
@@ -372,7 +374,7 @@
 
     </section>
 
-    <section id="OVERVIEW" class="sec2">
+    <!-- <section id="OVERVIEW" class="sec2">
         <div class="sec2-overview">
             <h1 class="sec2-heading"> OVERVIEW</h1>
             <br>
@@ -446,8 +448,64 @@
                 </button>
             </div>
         </div>
+    </section> -->
+    <section id="OVERVIEW" class="sec2" style="position: relative;">
+        
+        <div class="sec2-overview">
+            <h1 class="sec2-heading"> OVERVIEW</h1>
+            <br>
+            <ul class="sec2-info">
+                <li>Presenting A Life Beyond Comparison</li>
+                <li>7 Exquisite Towers Spread Across 6 Acres</li>
+                <li>5 Residential Towers Already Delivered</li>
+                <li>Fully Functional ~30,000 sq ft ClubHouse</li>
+                <li>4 Acres of Landscaped Central Greens</li>
+                <li>A Community of 1500 Elite Families</li>
+                <li>Lifestyle Choice For An Evolved Customer</li>
+            </ul>
+            <br>
+            <span>
+                <a href="#" class="full-brochure">FULL BROCHURE
+                    <img src="./assets/sec2-download-btn.png" width="22" style="vertical-align: sub;" alt="Asteria"
+                        class="changeicon">
+                </a>
+            </span>
+        </div>
+        <div class="sec2-carousel-cnt col-lg-6 col-xs-12">
+            <div id="sec2-car" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/s2-car-img1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/s2-car-img2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/s2-car-img3.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/s2-car-img4.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#sec2-car" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sec2-car" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </section>
-
+    
     <section id="location" class="sec-loc">
         <div class="sec2-overview loc-sec-info">
             <h1 class="sec2-heading"> LOCATION</h1>
@@ -789,11 +847,42 @@
                 </button>
                 <div id="carousel1" class="carousel-wrapper">
                     <div class="carousel d-flex">
-                        <img src="./assets/towerA1.png" alt="Plan 1">
-                        <img src="./assets/towerA2.png" alt="Plan 2">
-                        <img src="./assets/towerA3.png" alt="Plan 3">
-                        <img src="./assets/towerA4.png" alt="Plan 4">
-                        <img src="./assets/towerA5.png" alt="Plan 5">
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerA1.png" alt="Plan 1">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                         
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerA2.png" alt="Plan 2">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerA3.png" alt="Plan 3">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerA4.png" alt="Plan 4">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerA5.png" alt="Plan 5">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        
+                       
+                        
+                       
+                        
                     </div>
                 </div>
                 <button id="c1-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
@@ -806,10 +895,34 @@
                 </button>
                 <div id="carousel2" class="carousel-wrapper">
                     <div class="carousel d-flex">
-                        <img src="./assets/towerB1.png" alt="Plan 1">
-                        <img src="./assets/towerB2.png" alt="Plan 2">
-                        <img src="./assets/towerB3.png" alt="Plan 3">
-                        <img src="./assets/towerB4.png" alt="Plan 4">
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerB1.png" alt="Plan 1">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerB2.png" alt="Plan 2">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerB3.png" alt="Plan 3">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        <div class="img-plan-cnt">
+                            <img src="./assets/towerB4.png" alt="Plan 4">
+                            <div class="overlay"></div>
+                            <button class="hover-btn" data-bs-toggle="modal"
+                            data-bs-target="#registerModal">VIEW PLANS</button>
+                        </div>
+                        
+                        
+                       
+                        
                     </div>
                 </div>
                 <button id="c2-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
@@ -817,7 +930,13 @@
                 </button>
             </div>
             <div id="master-plan-cnt" class="carousel-container layout-plan">
-                <img src="./assets/mas-plan.png" alt="mas-plan">
+                <div class="img-plan-cnt">
+                    <img src="./assets/mas-plan.png" alt="mas-plan">
+                    <div class="overlay"></div>
+                    <button class="hover-btn" data-bs-toggle="modal"
+                    data-bs-target="#registerModal">VIEW PLANS</button>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -1165,7 +1284,19 @@
         </div>
         <span class="WA-redirect" data-bs-toggle="modal"
         data-bs-target="#registerModal"> <img style="width: 40px;" src="./assets/WA-icon.png" alt=""></span>
+
     </footer>
+
+    <div class="mob-view" >
+        <div class="para-logo call-now-cnt register-hover CTA-btn" data-bs-toggle="modal"
+        data-bs-target="#registerModal" style="width: 50%; border-right: 1px solid #fff; padding :5px">
+        <i class="fa-sharp fa-solid fa-phone" style="display:block;"></i>
+        <span >CALL NOW</span>
+    </div>
+    <!-- <div style="width:1px; border:1px solid #fff"></div> -->
+    <div class="CTA-btn" data-bs-toggle="modal"
+        data-bs-target="#registerModal" style="width: 50%; padding :5px"><img style="width: 25px;" src="./assets/WA-icon.png" alt="WA-icon"><span>WHATSAPP</span></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -1189,7 +1320,8 @@
         function initializeLayoutCarousels() {
             const carousels = document.querySelectorAll('.layout-plan .carousel');
             carousels.forEach(carousel => {
-                const slides = carousel.querySelectorAll('img');
+                const slides = carousel.querySelectorAll('.img-plan-cnt');
+                
                 if (slides.length <= 1) {
                     const container = carousel.closest('.carousel-container');
                     const buttons = container.querySelectorAll('.carousel-btn');
@@ -1204,11 +1336,12 @@
                         carousel.appendChild(clone);
                     });
                 }
+              
             });
         }
 
         function showLayoutSlide(carousel, index) {
-            const slides = carousel.querySelectorAll('img');
+            const slides = carousel.querySelectorAll('.img-plan-cnt');
             const totalSlides = slides.length / 2; // Account for cloned slides
             
             if (slides.length <= 1) return;
@@ -1228,8 +1361,10 @@
                 translateX = -(index * (slideWidth + gap));
                 layoutCurrentSlide = index;
             }
-            
-            carousel.style.transform = `translateX(${translateX}px)`;
+            slides.forEach((slide,idx)=>{
+                    slide.style.display = (idx >= layoutCurrentSlide && idx <= layoutCurrentSlide + 2 ) ? "block" : "none" ;
+                });
+            // carousel.style.transform = `translateX(${translateX}px)`;
             carousel.style.transition = 'transform 0.5s ease-in-out';
         }
 
@@ -1280,7 +1415,7 @@
             // Handle infinite scroll transitions
             document.querySelectorAll('.layout-plan .carousel').forEach(carousel => {
                 carousel.addEventListener('transitionend', () => {
-                    const slides = carousel.querySelectorAll('img');
+                    const slides = carousel.querySelectorAll('.img-plan-cnt');
                     if (layoutCurrentSlide >= slides.length / 2) {
                         carousel.style.transition = 'none';
                         layoutCurrentSlide = 0;
