@@ -374,8 +374,6 @@
 
     </section>
 
-
-
     <section id="OVERVIEW" class="align-items-center sec-padding">
         <div class="container">
             <div class="row desktopView" style="height: 460px;">
@@ -406,7 +404,6 @@
                     </div>
 
                 </div>
-
                 <div class="col-md-7 col-lg-7 d-flex slide-in-up slide-in-up-animate"
                     style="justify-content: right;padding-right:73px;">
                     <br>
@@ -740,11 +737,9 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="apartments" class="align-items-center sec-padding">
-
         <div class="container">
             <div class="row desktopView align-items-center justify-content-center" style="height: 460px;">
                 <div class="col-md-5 col-lg-7 col-sm-5 col-xs-12 pr-md-2 d-flex  align-items-center" style="height: 100%;justify-content: space-around;">
@@ -1040,12 +1035,9 @@
                 </div>
             </div>
         </div>
-
-    
-
     </section>
 
-    <section id="amenities" class="sec-loc">
+    <section id="amenities" class="align-items-center sec-padding">
         <div class="sec2-overview" style="margin-top: 2em;">
             <h1 class="sec2-heading"> AMENITIES</h1>
 
@@ -1323,7 +1315,10 @@
             </div>
             <div id="towerA-plan-cnt" class="carousel-container layout-plan">
                 <button id="c1-prev" class="carousel-btn" onclick="prevLayoutSlide(this)">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    
+                    <span >
+                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg);" alt="huihui">
+                    </span>
                 </button>
                 <div id="carousel1" class="carousel-wrapper">
                     <div class="carousel d-flex">
@@ -1366,12 +1361,16 @@
                     </div>
                 </div>
                 <button id="c1-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span aria-hidden="true">
+                        <img src="./assets/slider-arrow.png" alt="huihui">
+                    </span>
                 </button>
             </div>
             <div id="towerB-plan-cnt" class="carousel-container layout-plan">
                 <button id="c2-prev" class="carousel-btn" onclick="prevLayoutSlide(this)">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span  aria-hidden="true">
+                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg);" alt="huihui">
+                    </span>
                 </button>
                 <div id="carousel2" class="carousel-wrapper">
                     <div class="carousel d-flex">
@@ -1406,7 +1405,9 @@
                     </div>
                 </div>
                 <button id="c2-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span  aria-hidden="true">
+                        <img src="./assets/slider-arrow.png" alt="huihui">
+                    </span>
                 </button>
             </div>
             <div id="master-plan-cnt" class="carousel-container layout-plan">
@@ -1444,7 +1445,7 @@
     </section>
 
 
-    <section id="intro1" class="sec2">
+    <section id="intro1" class="align-items-center sec-padding">
         <div class="sec-car-aparts web-car">
             <div id="aparts-car">
                 <img src="./assets/intro1.png" style="border-radius: 14px;" class="d-block w-100" alt="huihui">
@@ -1497,7 +1498,7 @@
 
     </section>
 
-    <section id="intro2">
+    <section id="intro2" class="align-items-center sec-padding">
         <div class="sec2-overview">
             <h1 class="sec2-heading">WADHWA GROUP</h1>
 
@@ -1557,7 +1558,9 @@
 
             <div class="partners-carousel-container">
                 <button class="carousel-btn prev-btn" onclick="prevPartners()">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span  aria-hidden="true">
+                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg);" alt="huihui">
+                    </span>
                 </button>
                 <div class="partners-carousel">
                     <div class="partner-card">
@@ -1595,7 +1598,9 @@
 
                 </div>
                 <button class="carousel-btn next-btn" onclick="nextPartners()">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span  aria-hidden="true">
+                        <img src="./assets/slider-arrow.png" alt="huihui">
+                    </span>
                 </button>
             </div>
         </div>
@@ -2009,7 +2014,7 @@
             const visibleCards = getVisibleCards();
 
             // Calculate the translation considering the cloned cards
-            let translateX = -(index + totalPartners) * (100 / visibleCards);
+            let translateX = -(index + totalPartners) * (100 / visibleCards) ;
 
             if (!smooth) {
                 partnersCarousel.style.transition = 'none';
@@ -2018,6 +2023,7 @@
             }
 
             partnersCarousel.style.transform = `translateX(${translateX}%)`;
+            
             partnersIndex = index;
 
             if (smooth) {

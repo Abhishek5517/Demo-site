@@ -104,11 +104,11 @@
 }
 
 #c1-prev, #c2-prev {
-    left: 0;
+    left: 5px;
 }
 
 #c1-next, #c2-next {
-    right: 0;
+    right:6px;
 }
 
 .layout-sec {
@@ -192,9 +192,13 @@ cursor:pointer;
     z-index: 10;
     background-color: rgba(53, 4, 53, 0.5); /* Purple with 50% opacity */
 }
+
+.hover-btn:hover{
+    background-color: rgb(99 12 99 / 87%);
+}
 .img-plan-cnt:hover .hover-btn {
     display: block;
     z-index: 100;
     border : 1px solid #fff;
-    background-color: rgb(99 12 99 / 87%);
+  
 }
