@@ -11,6 +11,12 @@
     border-radius: 12px;
     border: 2px solid #d9d9d9;
 }
+
+
+.modal-body-content{
+    margin-left: 10px; 
+    margin-right: 10px;
+}
 @media (min-width: 576px) {
     .modal-dialog {
          max-width: var(--bs-modal-width); 
@@ -87,6 +93,11 @@
 .form-check-label {
     font-size: 14px;
 }
+
+.modal-subtitle{
+    font-size: 20px; margin-top:5px;
+}
+
 .modal-footer {
     border-top: none;
     padding-top: 0;
@@ -94,12 +105,29 @@
 @media (max-width: 576px) {
     .modal-body ul {
         flex-direction: column;
+        margin-left:0%;
+    }
+    .modal-title{
+        margin: 0% !important;
     }
     .modal-body ul li {
         width: 100%;
+        gap:5px;
+        font-size:14px !important;
+    }
+    #submit-access{
+        font-size: 20px !important;
+        padding: 8px;
+    }
+    .modal-subtitle{
+        font-size: 15px !important;
+        margin-bottom: 0% !important;
     }
     .modal-content {
         padding: 5px;
+    }
+    .modal-body p {
+        font-size: 14px !important;
     }
 }
 
