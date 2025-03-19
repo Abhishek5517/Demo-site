@@ -211,8 +211,8 @@
 
             .custom-navbar-links.active {
                 text-align: center;
-               
-                height:250px;
+                justify-content: inherit;
+                height:300px;
             }
 
             .custom-navbar-links a {
