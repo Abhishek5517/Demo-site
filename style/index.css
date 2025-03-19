@@ -31,19 +31,11 @@ section {
 }
 
 #intro1 {
-    background-color: rgb(242, 242, 242);
-    display: flex;
-    flex-direction: row;
-    padding: 70px;
-    gap: 2rem;
+  
 }
 
 #intro2 {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    padding: 70px;
-    gap: 2rem;
+  
 }
 
 #intro1 .sec-car-aparts,
@@ -82,7 +74,6 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 1vw;
     text-decoration: none;
 }
 
