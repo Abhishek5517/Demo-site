@@ -408,12 +408,11 @@
                 <div class="col-md-7 col-lg-7 d-flex" style="justify-content: right;padding-right:73px;">
                     <br>
                     <div id="sec2-car" class="carousel slide w-100 fading-in " style="max-width: 600px; ">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="0" class="active"
-                                aria-current="true"></button>
-                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="3"></button>
+                        <div class="carousel-indicators mx-auto">
+                            <button type="button" data-bs-target="#sec2-car"  class="active" aria-current="true" data-bs-slide-to="0" ></button>
+                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="1" data-bs-slide-to="0" ></button>
+                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="2" data-bs-slide-to="0" ></button>
+                            <button type="button" data-bs-target="#sec2-car" data-bs-slide-to="3" data-bs-slide-to="0" ></button>
                         </div>
                         <div class="carousel-inner" style="height: 460px; overflow: hidden;border-radius:12px;">
                             <div class="carousel-item active">
@@ -2255,6 +2254,51 @@
             document.querySelectorAll('.tab-menu button').forEach(tab => tab.classList.remove('active'));
             event.target.classList.add('active');
         }
+ 
+        // carousel indicators change 
+        document.addEventListener("DOMContentLoaded", function () {
+          
+            let carPrevbutton = document.querySelectorAll('.carousel-control-prev-icon');
+            let carNextbutton = document.querySelectorAll('  .carousel-control-next-icon');
+            
+            for( let i = 0 ; i < carNextbutton.length ; i++){
+                carNextbutton[i].style.width = '3rem';
+                carPrevbutton[i].style.width = '3rem' ;
+                carNextbutton[i].style.height = '3rem';
+                carPrevbutton[i].style.height = '3rem' ;
+            }
+            
+
+            let carouselIndicatorButtons =  document.querySelectorAll(".carousel-indicators button") ;
+            let carouselIndicator = document.querySelectorAll('.carousel-indicators');
+
+            carouselIndicator.forEach((indicator) =>{
+       
+                  indicator.style.backgroundColor = '#ffff';
+                  indicator.style.width = 'fit-content' ;
+                  indicator.classList.add('mx-auto');
+                  indicator.style.borderRadius = '1vw';
+                  
+
+            })
+            carouselIndicatorButtons.forEach((btn) =>{
+                
+                btn.style.borderTop = '5px solid transparent';
+                btn.style.borderBottom = '5px solid transparent';
+
+                btn.classList.add("rounded-circle");
+                btn.classList.add("firstIndicator");
+                btn.style.backgroundColor = "#5e3b9d"  ; 
+                btn.style.width = "1vw";
+                btn.style.height = "1vw";
+
+
+
+            });
+        
+
+        });
+
 
         // Layout carousel functionality
         let layoutCurrentSlide = 0;
