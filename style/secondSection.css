@@ -70,8 +70,11 @@
     animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Brochure link */
+
 .full-brochure {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
     color: #5e3b9d;
     /* color:red; */
     font-weight: bold;
@@ -82,8 +85,21 @@
     padding-bottom: 5px;
     /* font-size: 1.2vw; */
 }
+.full-brochure:hover {
+    text-decoration: none !important;
+     color: #8755bd; 
+  }
+  
+  .full-brochure:hover img {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(9%) saturate(4027%) hue-rotate(227deg) brightness(99%) contrast(87%);
+  
+  }
 
-/* Apartment carousel */
+
+
+
+
+
 .sec-car-aparts {
     width: 40%;
     margin-left: 15%;
@@ -167,7 +183,7 @@
     margin-bottom: 30px !important;
     line-height: 48px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 32pt;
+    font-size: 20pt !important;
     letter-spacing: 1px;
     font-weight: 600;
     }

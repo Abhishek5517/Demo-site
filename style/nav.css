@@ -142,7 +142,8 @@
         }
 
         .custom-navbar-links a:hover {
-            color: #007bff;
+            text-decoration: none;
+            color: #8755bd;
         }
 
      
