@@ -31,6 +31,7 @@
 .sec2-info {
     font-size: 1vw;
     font-weight: 500;
+    padding-left: 5% !important;
     line-height: 35px;
     color: #666666;
     opacity: 0;
