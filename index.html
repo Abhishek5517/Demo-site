@@ -2428,7 +2428,7 @@
                 planCont[2].style.display = "none";
                 showLayoutSlide(planCont[0], 0, false);
                 defaultElment = planCont[0];
-              
+
             } else if (element.id === "towerB-btn") {
                 planCont[0].style.display = "none";
                 planCont[1].style.display = "flex";
@@ -2442,14 +2442,14 @@
             }
         }
 
-        
 
 
-        function autoTriggerButtonClick(){
+
+        function autoTriggerButtonClick() {
             let buttonToTrigger = defaultElment.querySelectorAll('.carousel-btn');
-             console.log(buttonToTrigger[1].id);
-             nextLayoutSlide(buttonToTrigger[1]);
-          
+            console.log(buttonToTrigger[1].id);
+            nextLayoutSlide(buttonToTrigger[1]);
+
 
         }
         window.setInterval(autoTriggerButtonClick(), 1000);
@@ -2459,7 +2459,7 @@
             // initializeLayoutCarousels();
             const ele = document.getElementById("towerA-btn");
             switchTab(ele);
-           
+
 
         });
 
