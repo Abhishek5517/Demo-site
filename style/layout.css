@@ -137,22 +137,7 @@
     }
 }
 
-@media (max-width: 480px) {
 
-
-    .carousel img,
-    #master-plan-cnt img {
-        width: 240px;
-    }
-
-    .carousel-container {
-        padding: 0 30px;
-    }
-
-    .carousel-btn {
-        font-size: 24px;
-    }
-}
 
 .img-plan-cnt {
     position: relative;

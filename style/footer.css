@@ -46,7 +46,7 @@
 .royalty-cards {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+   
     width: 100%;
     align-items: center;
 }
@@ -59,9 +59,10 @@
 
 .royalty-card img {
     width: 70px;
-    height: auto;
+    height: 60px;
     margin-bottom: 15px;
 }
+
 
 .royalty-card h3 {
     font-size: 18px;
@@ -80,7 +81,7 @@
 @media screen and (max-width: 992px) {
     .royalty-cards {
         flex-wrap: wrap;
-        gap: 20px;
+        gap:10px;
     }
 
     .royalty-card {
@@ -98,30 +99,55 @@
     }
 
     .royalty-text p {
+        text-align: justify !important;
         font-size: 14px;
     }
 
     .royalty-card h3 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .royalty-card p {
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
 @media screen and (max-width: 576px) {
     .royalty-cards {
-        flex-direction: column;
+        display: grid
+        ;
+        
+            grid-template-columns: auto auto;
+            width: 100%;
+            justify-content: space-around;
+            align-items: baseline;
     }
 
+    .royalty-card img {
+        width: 50px;
+        height: 45px;
+    }
     .royalty-card {
         flex: 0 0 100%;
+        padding: 0%;
     }
 
     .royalty-logo-img {
         width: 150px;
     }
+    .royalty-card h3 {
+        font-size: 12px;
+    }
+
+    .royalty-card p {
+        font-size: 10px;
+    }
+
+    .royalty-text p {
+        text-align: justify !important;
+
+    }
+
 
     .royalty-text {
         margin-bottom: 20px;
