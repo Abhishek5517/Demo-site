@@ -66,7 +66,7 @@
 
 .royalty-card h3 {
     font-size: 18px;
-    color: #333;
+    color: #8a0c03;
     margin-bottom: 10px;
     font-weight: 600;
 }
@@ -105,6 +105,7 @@
 
     .royalty-card h3 {
         font-size: 14px;
+        font-weight: 600;
     }
 
     .royalty-card p {
@@ -137,6 +138,7 @@
     }
     .royalty-card h3 {
         font-size: 12px;
+        font-weight: 600;
     }
 
     .royalty-card p {
