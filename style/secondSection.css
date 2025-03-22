@@ -107,10 +107,6 @@
 }
 
 /* Apartment description */
-.sec-desc-aparts {
-    /* padding-left: 2em;
-    padding-top: 1em; */
-}
 
 /* Responsive Media Queries */
 
@@ -151,9 +147,6 @@
         font-size: 14pt;
     }
 
-    .sec-desc-aparts {
-        /* padding: 1em; */
-    }
 }
 
 /* Medium Screens (576px - 992px) */
