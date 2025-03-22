@@ -227,15 +227,11 @@
     }
 
     
-    .carousel-wrapper {
-        max-width: 80%;
-    }
+  
 
     .img-plan-cnt {
         width: calc(100% - 30px);
     }
 
-    #master-plan-cnt {
-        width: 80%;
-    }
+   
 }
