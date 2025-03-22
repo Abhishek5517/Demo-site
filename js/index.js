@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carouselCnt.forEach((carousel) => {
         carousel.setAttribute('data-bs-ride', 'carousel');
+        console.log(carousel);
     })
 
 

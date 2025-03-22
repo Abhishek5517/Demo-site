@@ -16,6 +16,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    padding: 0% 10% 2% 10%;
     /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
 }
 
@@ -33,9 +34,16 @@
     .desktop-image {
         display: none;
     }
-
+    .updates-content{
+        margin-top: 0% !important;
+    }
+    .updates-content img{
+        padding: 0% !important;
+       
+    }
     .mobile-image {
         display: block;
         margin: 0 auto;
+        height: 460px !important;
     }
 }
