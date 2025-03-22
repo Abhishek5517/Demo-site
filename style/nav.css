@@ -203,7 +203,7 @@
                 width: 100%;
                 top: 50px;
                 height: 0;
-             
+                background: #fff;
                 text-align: center;
                 transition: height 0.5s ease-in-out;
                 padding: 10px 0;
@@ -214,6 +214,7 @@
                 text-align: center;
                 justify-content: inherit;
                 height:300px;
+                box-shadow: 0px 6px 5px 0px;
             }
 
             .custom-navbar-links a {

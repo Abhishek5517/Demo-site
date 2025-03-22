@@ -22,9 +22,13 @@
   }
 
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
         transform: translateY(80px);
+    }
+    50%{
+        opacity: 0.5;
+        transform:translateY(40px);
     }
     to {
         opacity: 1;
