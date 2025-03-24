@@ -113,7 +113,7 @@ function showLayoutSlide(element, index, smooth = true) {
 
     let totalPlans = element.querySelectorAll(`#${element.id} .carousel .img-plan-cnt`).length;
 
-    totalPlans = totalPlans / 3;
+    totalPlans = totalPlans/3;
 
 
     if (isLayoutTransitioning) return;
@@ -138,7 +138,6 @@ function showLayoutSlide(element, index, smooth = true) {
         isLayoutTransitioning = true;
         setTimeout(() => {
             isLayoutTransitioning = false;
-
             if (index >= totalPlans) {
                 showLayoutSlide(element, 0, false);
             } else if (index < 0) {
@@ -182,7 +181,8 @@ function cloneLayoutSlide(ele) {
     });
     layoutCards.forEach(card => {
         const clone = card.cloneNode(true);
-        updatedCarousel.insertBefore(clone, updatedCarousel.firstChild);
+        // updatedCarousel.insertBefore(clone, updatedCarousel.firstChild);
+        updatedCarousel.appendChild(clone);
     });
 }
 cloneLayoutSlide(layoutPlanTowerA);
@@ -255,7 +255,8 @@ function cloneCards() {
     });
     partnerCards.forEach(card => {
         const clone = card.cloneNode(true);
-        partnersCarousel.insertBefore(clone, partnersCarousel.firstChild);
+        // partnersCarousel.insertBefore(clone, partnersCarousel.firstChild);
+        partnersCarousel.appendChild(clone);
     });
 }
 
