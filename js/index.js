@@ -222,8 +222,10 @@ function autoTriggerButtonClick() {
     nextLayoutSlide(buttonToTrigger[1]);
 
 
+
 }
-window.setInterval(autoTriggerButtonClick(), 1000);
+
+setInterval(autoTriggerButtonClick, 2500);
 // setInterval(autoTriggerButtonClick(), 100);
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -239,7 +241,9 @@ let partnersIndex = 0;
 const partnersCarousel = document.querySelector('.partners-carousel');
 const partnerCards = document.querySelectorAll('.partner-card');
 const totalPartners = partnerCards.length;
+const partnerNextBtn = document.getElementById('partner-next-btn');
 let isTransitioning = false;
+
 
 function getVisibleCards() {
     if (window.innerWidth <= 576) return 1;
@@ -302,6 +306,13 @@ function nextPartners() {
         showPartners(partnersIndex + 1);
     }
 }
+
+
+// automatic carousel change partners 
+setInterval(() => {
+    nextPartners() ;
+} , 2500 )
+
 
 // Initialize partners carousel
 cloneCards();
