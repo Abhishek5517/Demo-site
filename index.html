@@ -310,6 +310,7 @@
             <div></div>
         </button>
 
+
         <ul class="custom-navbar-links mx-auto" id="customNavbarLinks" style="font-size: 1vw;">
             <li><a href="#OVERVIEW">OVERVIEW</a></li>
             <li><a href="#location">LOCATION</a></li>
@@ -340,31 +341,35 @@
             <img src="./assets/firstImage.png" class="img-fluid first-section-img" alt="Asteria" />
         </div>
         <div class="first-sec-info">
-            <div class="ad-container">
+            <div class="ad-container px-2">
                 <div class="pre-launch">EXCLUSIVE PRE-LAUNCH</div>
+               
                 <div class="title">ASTERIA AT COURTYARD</div>
                 <div class="location">
+              
                     <p>Pokhran Road 2, Thane</p>
                 </div>
+         
                 <div class="features">
 
-                    <div class="col-lg-3 col-xs-4 fadeInUp" data-animation="fadeInUp" data-animation-delay="500"
-                        style="padding-right: 0px !important; visibility: visible; animation-name: fadeInUp;">
+                    <div class="col-lg-3 col-xs-4 fadeInUp" style="padding-left:2%; padding-right:2%;">
                         <span class="feature-name">Prime<br> Location<br>
                         </span>
                     </div>
                     <div id="seperator"></div>
-                    <div class="col-lg-3 col-xs-4  fadeInUp">
+                    <div class="col-lg-3 col-xs-4  fadeInUp" style="padding-left:2%; padding-right:2%;">
                         <span class="feature-name"> Luxury <br>Apartments<br> </span>
                     </div>
                     <div id="seperator"></div>
-                    <div class="col-lg-3 col-xs-4 fadeInUp">
+                    <div class="col-lg-3 col-xs-4 fadeInUp" style="padding-left:2%; padding-right:2%;">
                         <span class="feature-name">A Majestic<br>Clubhouse<br></span>
 
                     </div>
 
                 </div>
+              
                 <div class="pricing">2, 3 & 4 Bed Residences<br>Starting 1.9 Cr+</div>
+          
                 <span>
                     <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                         data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -872,7 +877,7 @@
 
                 <div class="col-md-6 col-lg-7 d-flex" style="justify-content: center;">
                     <div
-                        style="width: 100%; height: 400px; display: flex; flex-direction: column; justify-content: center;">
+                        style="width: 100%; height: 400px; display: flex; flex-direction: column; justify-content: center; padding-left: 10%;">
                         <h2 class="sec2-heading fading-in">APARTMENTS</h2>
 
                         <ul class="sec2-info fading-in" style="font-size: 14px !important;
@@ -1464,41 +1469,46 @@
                 <button id="c1-prev" class="carousel-btn prev-btn" onclick="prevLayoutSlide(this)">
 
                     <span>
-                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg); width:45px;"
+                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg); width:40px;"
                             alt="huihui">
                     </span>
                 </button>
                 <div id="carousel1" class="carousel-wrapper mx-auto " style="overflow: hidden;">
                     <div class="carousel d-flex" data-bs-touch="true">
-                  
+
                         <div class="img-plan-cnt">
                             <img src="./assets/towerA1.png" alt="Plan 1">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
 
                         </div>
-                        <div class="img-plan-cnt">
+                        <div class="img-plan-cnt" onmouseover="onHoverLayoutStop(this)">
                             <img src="./assets/towerA2.png" alt="Plan 2">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
-                        <div class="img-plan-cnt">
+                        <div class="img-plan-cnt" onmouseover="onHoverLayoutStop(this)">
                             <img src="./assets/towerA3.png" alt="Plan 3">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
-                        <div class="img-plan-cnt">
+                        <div class="img-plan-cnt" onmouseover="onHoverLayoutStop(this)">
                             <img src="./assets/towerA4.png" alt="Plan 4">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
-                        <div class="img-plan-cnt">
+                        <div class="img-plan-cnt" onmouseover="onHoverLayoutStop(this)">
                             <img src="./assets/towerA5.png" alt="Plan 5">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
@@ -1507,7 +1517,7 @@
                 </div>
                 <button id="c1-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
                     <span aria-hidden="true">
-                        <img src="./assets/slider-arrow.png" style="width:45px;" alt="huihui">
+                        <img src="./assets/slider-arrow.png" style="width:40px;" alt="huihui">
                     </span>
                 </button>
             </div>
@@ -1523,25 +1533,29 @@
                     <div class="carousel d-flex">
                         <div class="img-plan-cnt">
                             <img src="./assets/towerB1.png" alt="Plan 1">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
                         <div class="img-plan-cnt">
                             <img src="./assets/towerB2.png" alt="Plan 2">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
                         <div class="img-plan-cnt">
                             <img src="./assets/towerB3.png" alt="Plan 3">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
                         <div class="img-plan-cnt">
                             <img src="./assets/towerB4.png" alt="Plan 4">
-                            <div class="overlay"></div>
+                            <div class="overlay" onmouseover="onHoverLayoutStop(this)"
+                                onmouseleave="setAutomaticLayoutChange()"></div>
                             <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW
                                 PLANS</button>
                         </div>
@@ -1549,7 +1563,7 @@
                 </div>
                 <button id="c2-next" class="carousel-btn" onclick="nextLayoutSlide(this)">
                     <span aria-hidden="true">
-                        <img src="./assets/slider-arrow.png" style="width:45px;" alt="huihui">
+                        <img src="./assets/slider-arrow.png" style="width:40px;" alt="huihui">
                     </span>
                 </button>
             </div>
@@ -1956,7 +1970,7 @@
             <div class=" carousel-container fading-in">
                 <button id="partner-prev-btn" class="carousel-btn prev-btn" onclick="prevPartners()">
                     <span aria-hidden="true">
-                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg); width:45px;"
+                        <img src="./assets/slider-arrow.png" style="transform: rotate(180deg); width:40px;"
                             alt="huihui">
                     </span>
                 </button>
@@ -2000,7 +2014,7 @@
 
                 <button id="partner-next-btn" class="carousel-btn next-btn" onclick="nextPartners()">
                     <span aria-hidden="true">
-                        <img src="./assets/slider-arrow.png" style="width:45px;" alt="huihui">
+                        <img src="./assets/slider-arrow.png" style="width:40px;" alt="huihui">
                     </span>
                 </button>
             </div>
@@ -2161,7 +2175,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="disclaimer-section fading-in">
-                <p class="disclaimer-text">
+                <p class="disclaimer-text ">
                     Disclaimer: The content on this website does not constitute an offer and/or acceptance and/or
                     contract and/or agreement and/or transaction and/or any intention thereof and/or a disclosure under
                     any statute of any nature whatsoever. No representation or warranty is made or intended as to the
@@ -2175,12 +2189,12 @@
                     brokers/companies/projects for further processing. For more details you can refer to our Privacy
                     Policy page.
                 </p>
-                <div class="qr-codes">
+                <div class="qr-codes fading-in">
                     <img src="./assets/foot-qr1.png" alt="QR Code 1" class="qr-code">
                     <img src="./assets/foot-qr2.png" alt="QR Code 2" class="qr-code">
                 </div>
             </div>
-            <div class="rera-section fading-in">
+            <div class="rera-section fading-in fading-in">
                 <p>
                     RERA: Royalti Real Estate Private Limited is registered via MahaRERA registration number:
                     #A51700003623.<br>
@@ -2191,7 +2205,7 @@
                 </p>
             </div>
             <div class="footer-bottom fading-in">
-                <div class="footer-links">
+                <div class="footer-links fading-in">
                     <p>
                         Registered Trademarks © 2024 Royalti Real Estate Private Limited. All Rights Reserved. |
                         <a href="#">Terms & Conditions</a> |

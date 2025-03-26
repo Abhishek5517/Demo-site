@@ -41,7 +41,7 @@
 
 /* Bullet points */
 .sec2-info li::marker {
-    color: #604280;
+    color: #5e3b9d;
     font-weight: bold;
     display: inline-block;
     width: 0.5em;
@@ -76,8 +76,9 @@
     position: relative;
     display: inline-block;
     overflow: hidden;
-    color: #5e3b9d;
-    /* color:red; */
+    color: white;
+    background: #5e3b9d;
+    /* color: red; */
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
@@ -85,14 +86,24 @@
     border-bottom: 2px solid #5e3b9d;
     padding-bottom: 5px;
     /* font-size: 1.2vw; */
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 21px;
 }
+
+
+
 .full-brochure:hover {
     text-decoration: none !important;
-     color: #8755bd; 
+    background: #7254a8;
+    color: #ffffff !important;
+    border: 1px solid !important;
   }
   
-  .full-brochure:hover img {
-    filter: brightness(0) saturate(100%) invert(39%) sepia(9%) saturate(4027%) hue-rotate(227deg) brightness(99%) contrast(87%);
+  .full-brochure img {
+    filter: brightness(0) invert(1);
+    /* filter: brightness(0) saturate(100%) invert(39%) sepia(9%) saturate(4027%) hue-rotate(227deg) brightness(99%) contrast(87%); */
   
   }
 

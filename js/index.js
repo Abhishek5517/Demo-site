@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carouselCnt.forEach((carousel) => {
         carousel.setAttribute('data-bs-ride', 'carousel');
-        console.log(carousel);
+     
     })
 
 
@@ -104,6 +104,7 @@ let isLayoutTransitioning = false;
 let layoutPlanTowerA = document.getElementById('towerA-plan-cnt');
 let layoutPlanTowerB = document.getElementById('towerB-plan-cnt');
 let defaultElment = layoutPlanTowerA;
+let cInt = '';
 
 
 
@@ -218,15 +219,20 @@ function switchTab(element) {
 
 function autoTriggerButtonClick() {
     let buttonToTrigger = defaultElment.querySelectorAll('.carousel-btn');
-    console.log(buttonToTrigger[1].id);
+
     nextLayoutSlide(buttonToTrigger[1]);
-
-
-
 }
 
-setInterval(autoTriggerButtonClick, 2500);
-// setInterval(autoTriggerButtonClick(), 100);
+function onHoverLayoutStop(ele){
+
+clearInterval(cInt);
+}
+
+function setAutomaticLayoutChange(){
+    cInt = setInterval(autoTriggerButtonClick, 2500);
+}
+
+setAutomaticLayoutChange();
 
 document.addEventListener('DOMContentLoaded', () => {
     // initializeLayoutCarousels();

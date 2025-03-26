@@ -193,6 +193,7 @@
 
 .img-plan-cnt:hover img {
     cursor: pointer;
+    opacity: 0.2;
 }
 
 .img-plan-cnt:hover .overlay {

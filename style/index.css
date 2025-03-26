@@ -36,6 +36,9 @@
     }
 }
 
+
+
+
 .fading-in {
     opacity: 0;
     transform: translateY(80px);
@@ -66,8 +69,8 @@ section {
 }
 
 .register-hover:hover {
-    text-decoration: none;
-    color: #8755bd;
+    text-decoration: none !important;
+    background: #7254a8;
 }
 
 
