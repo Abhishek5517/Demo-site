@@ -1,6 +1,5 @@
 .layouts-container {
     text-align: center;
-    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -117,7 +116,7 @@
 
 .layout-sec {
     background-color: rgb(242, 242, 242);
-    padding: 40px 0;
+    padding: 80px 0px;
 }
 
 /* Responsive styles */

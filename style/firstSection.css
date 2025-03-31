@@ -6,14 +6,14 @@
     background-color: #F2F2F2;
 }
 
-.first-sec-info{
+.first-sec-info {
     display: flex;
     align-items: center;
-    width:40%;
+    width: 40%;
     justify-content: center;
-    
+
     flex-direction: row;
-    
+
 }
 
 .first-section-img {
@@ -28,6 +28,7 @@
 }
 
 .ad-container {
+    display: flex;
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -36,10 +37,12 @@
     opacity: 0;
     transform: translateY(50px);
     animation: fadeInUp 1s ease-out forwards;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pre-launch {
-    color: #5e3b9d;
+    color: grey;
     font-weight: bold;
 }
 
@@ -64,7 +67,7 @@
     display: block;
     padding: 0.1vw 0 0.1vw 5px;
     font-size: 15pt;
-    color: #7254a8;
+    color: grey;
     text-transform: capitalize;
     line-height: 0.8vw;
     /* color: #666666; */
@@ -74,14 +77,16 @@
 
 .features {
     display: flex;
-        margin: 20px 0;
-        font-size: 14px;
-        color: #777;
-        margin: 20px 0;
-        font-size: 14px;
-        color: #777;
-        flex-direction: row;
-        justify-content: center;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #777;
+    width:80%;
+
+    margin: 20px 0;
+    font-size: 14px;
+    color: #777;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .features span {
@@ -90,7 +95,7 @@
 }
 
 .separator {
-    border-left: 1px solid #5e3b9d;
+    border-left: 1px solid grey;
     height: 16px;
 }
 
@@ -110,10 +115,10 @@
     font-size: 20px;
 }
 
-#seperator{
+#seperator {
     width: 2px;
     height: auto;
-    border: 1px solid #5e3b9d;
+    border: 1px solid grey;
 }
 
 .feature-border {
@@ -123,9 +128,12 @@
 }
 
 .feature-name {
+    text-align: -webkit-center !important;
+    margin-bottom: 0%;
     padding-left: 2%;
     padding-right: 2%;
-    color: #7254a8;
+    font-weight: 500 !important;
+    color: grey;
 }
 
 /* Media Queries */
@@ -137,9 +145,11 @@
         flex-wrap: wrap;
         text-align: center;
     }
-    .first-sec-info{
-        width:100%;
+
+    .first-sec-info {
+        width: 100%;
     }
+
     .first-section-img-cnt {
         width: 100%;
     }
@@ -155,10 +165,10 @@
     .features {
         flex-direction: row;
         gap: 10px;
-        font-size:1vw;
+        font-size: 1vw;
     }
 
-  
+
 
     .pricing {
         font-size: 16px;
@@ -176,15 +186,18 @@
         flex-direction: column;
         text-align: center;
         align-items: center;
-        
-       
+
+
     }
-    .ad-container{
+
+    .ad-container {
         padding-top: 20px;
     }
-    .first-sec-info{
-        width:100%;
+
+    .first-sec-info {
+        width: 100%;
     }
+
     .first-section-img-cnt {
         width: 100%;
     }
@@ -210,7 +223,7 @@
 @media (min-width: 992px) {
     .pricing-container {
         max-width: 900px;
-        padding: 40px;
+      
     }
 
     .table {

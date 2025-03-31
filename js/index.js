@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         indicator.style.backgroundColor = '#ffff';
         indicator.style.width = 'fit-content';
         indicator.classList.add('mx-auto');
-        indicator.style.borderRadius = '1vw';
+        indicator.style.borderRadius = '50px';
 
 
     })
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.add("rounded-circle");
         btn.classList.add("firstIndicator");
         btn.style.backgroundColor = "#5e3b9d";
-        btn.style.width = "1vw";
-        btn.style.height = "1vw";
+        btn.style.width = "10px";
+        btn.style.height = "10px";
 
 
 

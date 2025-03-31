@@ -20,20 +20,23 @@
     position: relative;
     right: 5%;
     font-weight: 800;
-    
     color: white;
     background: #5e3b9d;
-    padding: 10px;
-    border-radius: 10px;
+    /* padding: 10px; */
+    padding: 5px 8px 5px 8px !important;
+    border-radius: 11px;
+    border : 1px solid #5e3b9d ;
     text-align: center;
+    font-size: 14pt;
 }
 #nav-call-btn:hover{
     background: #7254a8;
-    /* border: 1px solid !important; */
+
+    border: 1px solid #ffffff!important;
 }
 
 .call-now-cnt {
-
+  
 
     display: flex;
     flex-direction: row;
@@ -111,9 +114,6 @@
         position:relative ;
         left : 12%;
     }
-    .call-now-cnt {
-        margin-top: -10px;
-    }
 
     #logoImg {
         width: 80px;
@@ -149,17 +149,19 @@
     /* margin: 0;
             padding: 0; */
     overflow: hidden;
+ 
     /* height: 0px;  */
     transition: all 0.3s ease-in-out;
 }
 
 .custom-navbar-links li {
     margin: 0 10px;
+   
 }
 
 .custom-navbar-links a {
 
-    color: black;
+    color: grey;
     text-decoration: none;
     padding: 8px 12px;
     display: block;

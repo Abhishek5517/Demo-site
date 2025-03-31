@@ -78,18 +78,18 @@
     overflow: hidden;
     color: white;
     background: #5e3b9d;
-    /* color: red; */
+  
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
     margin-top: 15px;
-    border-bottom: 2px solid #5e3b9d;
+ 
     padding-bottom: 5px;
-    /* font-size: 1.2vw; */
-    padding: 5px;
-    border-radius: 10px;
+    font-size : 21px ;
+    padding: 4px 7px 4px 7px !important;
+    border-radius: 11px;
     font-weight: 800;
-    font-size: 21px;
+    border: 1px solid #5e3b9d!important;
 }
 
 
@@ -98,7 +98,7 @@
     text-decoration: none !important;
     background: #7254a8;
     color: #ffffff !important;
-    border: 1px solid !important;
+    border: 1px solid #ffffff !important;
   }
   
   .full-brochure img {
