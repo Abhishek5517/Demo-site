@@ -330,4 +330,7 @@ section {
         position:relative;
         left: 20px;
     }
+    .carousel-wrapper{
+        max-width: 80% !important;
+    }
 }
