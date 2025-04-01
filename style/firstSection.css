@@ -166,6 +166,7 @@
         flex-direction: row;
         gap: 10px;
         font-size: 1vw;
+        padding-left:5% ;
     }
 
 
@@ -212,6 +213,7 @@
 
     .features {
         font-size: 12px;
+        padding-left:5% ;
     }
 
     .virtual-tour {
