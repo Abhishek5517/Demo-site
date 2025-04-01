@@ -106,12 +106,12 @@
 
 #c1-prev,
 #c2-prev {
-    left: 5px;
+    left: 5%;
 }
 
 #c1-next,
 #c2-next {
-    right: 6px;
+    right: 5%;
 }
 
 .layout-sec {
@@ -122,8 +122,7 @@
 /* Responsive styles */
 @media (max-width: 768px) {
 
-    .carousel img,
-    #master-plan-cnt img {
+    .carousel img {
         width: 280px;
     }
 
