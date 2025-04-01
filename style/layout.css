@@ -218,6 +218,9 @@
     .img-plan-cnt {
         width: calc(50% - 30px);
     }
+    .carousel-wrapper{
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 576px) {
