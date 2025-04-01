@@ -51,7 +51,7 @@
 
 /* Master plan image specific size */
 #master-plan-cnt img {
-    width: 300px;
+  
     height: auto;
     border-radius: 10px;
     object-fit: contain;

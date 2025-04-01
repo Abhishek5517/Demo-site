@@ -91,9 +91,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     });
-
+  
 
 });
+  // For Master plan width 
+  let masterPlanContainer = document.getElementById('master-plan-cnt') ;
+  let masterPlanImgContainer = document.querySelector('#master-plan-cnt .img-plan-cnt') ;
+  let towerAImageContainer = document.querySelectorAll('#towerA-plan-cnt .img-plan-cnt') ;
+  let towerBImageContainer = document.querySelectorAll('#towerB-plan-cnt .img-plan-cnt');
+
+function changeMasterPlanWidth(ImgcontainerWidth){
+    masterPlanImgContainer.style.width = ImgcontainerWidth +'px' ;
+    masterPlanImgContainer.style.height = ImgcontainerWidth +'px' ;
+}
+
+
 
 
 // Layout carousel functionality
@@ -193,25 +205,31 @@ function switchTab(element) {
     document.querySelectorAll('.tab-links button').forEach(btn => btn.classList.remove('active'));
     element.classList.add('active');
     const planCont = document.querySelectorAll('div .layout-plan');
-
+    let ImgcontainerWidth = '' ;
     if (element.id === "towerA-btn") {
         planCont[0].style.display = "flex";
         planCont[1].style.display = "none";
         planCont[2].style.display = "none";
         showLayoutSlide(planCont[0], 0, false);
         defaultElment = planCont[0];
-
-    } else if (element.id === "towerB-btn") {
+        ImgcontainerWidth = towerAImageContainer[0].offsetWidth;
+        changeMasterPlanWidth(ImgcontainerWidth) ;
+    } else if (element.id === "towerB-btn") {  
         planCont[0].style.display = "none";
         planCont[1].style.display = "flex";
         planCont[2].style.display = "none";
         showLayoutSlide(planCont[1], 0, false);
+       
         defaultElment = planCont[1];
+        ImgcontainerWidth = towerBImageContainer[0].offsetWidth;
+        changeMasterPlanWidth(ImgcontainerWidth) ;
     } else if (element.id === "mas-plan-btn") {
         planCont[0].style.display = "none";
         planCont[1].style.display = "none";
         planCont[2].style.display = "flex";
+        changeMasterPlanWidth(ImgcontainerWidth) ;
     }
+    
 }
 
 

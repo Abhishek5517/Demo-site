@@ -20,6 +20,9 @@
     cursor: pointer;
     background: #8755bd; 
   }
+body{
+    font-family: 'DM Sans', sans-serif  !important;
+}
 
 @keyframes fadeInUp {
     0% {
