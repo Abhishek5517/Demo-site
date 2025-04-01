@@ -324,7 +324,7 @@ section {
     #nav-call-btn {
         font-size : 1vw;
         right :15%;
-        width:6rem;
+        width:110px;
     }
     .custom-navbar-brand{
         position:relative;
@@ -333,4 +333,14 @@ section {
     .carousel-wrapper{
         max-width: 80% !important;
     }
+}
+
+@media  (max-width : 992px ) {
+    #nav-call-btn {
+        font-size : 1.3vw;
+        right :15%;
+        width:110px;
+    }
+
+    
 }
