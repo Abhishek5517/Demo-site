@@ -240,7 +240,6 @@ section {
         display: flex !important;
     }
 
-
     #intro1,
     #intro2 {
         padding: 50px;
@@ -270,7 +269,7 @@ section {
         transition: all 0.3s ease-in-out 0s;
         z-index: 1000;
         width: 100%;
-        background-color: #604280;
+        background-color: #5e3b9d;
         border-radius: 0;
         bottom: 0;
         color: #fff;
