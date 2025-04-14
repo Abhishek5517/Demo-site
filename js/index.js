@@ -357,3 +357,30 @@ partnersCarousel.addEventListener('transitionend', () => {
     isTransitioning = false;
 });
 
+
+
+function validateForm() {
+    const name = document.forms["PopupForm"]["Name"].value.trim();
+    const email = document.forms["PopupForm"]["Email"].value.trim();
+    const mobile = document.forms["PopupForm"]["Mobile"].value.trim();
+    const countryCode = document.forms["PopupForm"]["CountryCode"].value;
+    const agree = document.forms["PopupForm"]["agree"].checked;
+
+    if (name === "" || email === "" || mobile === "" || countryCode === "") {
+      alert("Please fill in all required fields.");
+      return false;
+    }
+
+    if (!agree) {
+      alert("Please agree to receive updates.");
+      return false;
+    }
+
+    const phoneRegex = /^[0-9]{6,15}$/;
+    if (!phoneRegex.test(mobile)) {
+      alert("Please enter a valid mobile number.");
+      return false;
+    }
+
+    return true;
+  }
