@@ -360,9 +360,9 @@ partnersCarousel.addEventListener('transitionend', () => {
 
 
 function validateForm() {
-    const name = document.forms["PopupForm"]["Name"].value.trim();
-    const email = document.forms["PopupForm"]["Email"].value.trim();
-    const mobile = document.forms["PopupForm"]["Mobile"].value.trim();
+    const name = document.forms["PopupForm"]["name"].value.trim();
+    const email = document.forms["PopupForm"]["email"].value.trim();
+    const mobile = document.forms["PopupForm"]["mobile"].value.trim();
     const countryCode = document.forms["PopupForm"]["CountryCode"].value;
     const agree = document.forms["PopupForm"]["agree"].checked;
 
@@ -384,3 +384,4 @@ function validateForm() {
 
     return true;
   }
+

@@ -58,9 +58,9 @@
                     </div>
  
 
-                    <form action="http://localhost:3000/submit-form" method="POST" id="PopupForm" name="PopupForm" onsubmit="return validateForm();" >
-                        <input type="text" name="Name" class="form-control input-group" placeholder="Name *" required>
-                        <input type="email" name="Email" class="form-control input-group" placeholder="Email *" required>
+                    <form action="register-form.php" method="POST" id="PopupForm" name="PopupForm" onsubmit="return validateForm();" >
+                        <input type="text" name="name" class="form-control input-group" placeholder="Name *" required>
+                        <input type="email" name="email" class="form-control input-group" placeholder="Email *" required>
                         <div class="d-flex gap-2">
     
                             <select name="CountryCode" id="banner-cta-CountryCode"
@@ -286,7 +286,7 @@
                                     <option value="263">Zimbabwe (+263)</option>
                                 </optgroup>
                             </select>
-                            <input type="text" name="Mobile" class="form-control input-group" placeholder="Mobile *" required>
+                            <input type="text" name="mobile" class="form-control input-group" placeholder="Mobile *" required>
                             <input type="hidden" name="utm_source" id="utm_source" value>
                             <input type="hidden" name="utm_medium" id="utm_medium" value>
                             <input type="hidden" name="utm_campaign" id="utm_campaign" value>
@@ -326,12 +326,12 @@
 
 
         <ul class="custom-navbar-links mx-auto" id="customNavbarLinks" style="font-size: 1vw;">
-            <li><a style="font-weight:600 ;" href="#OVERVIEW">OVERVIEW</a></li>
-            <li><a style="font-weight:600 ;"href="#location">LOCATION</a></li>
-            <li><a style="font-weight:600 ;"href="#amenities">AMENITIES</a></li>
-            <li><a style="font-weight:600 ;"href="#variants">VARIANTS</a></li>
-            <li><a style="font-weight:600 ;"href="#layouts">LAYOUTS</a></li>
-            <li><a style="font-weight:600 ;"href="#int1">DEVELOPER</a></li>
+            <li><a style="font-weight:600 ;" href="/#overview">OVERVIEW</a></li>
+            <li><a style="font-weight:600 ;"href="/#location">LOCATION</a></li>
+            <li><a style="font-weight:600 ;"href="/#amenities">AMENITIES</a></li>
+            <li><a style="font-weight:600 ;"href="/#variants">VARIANTS</a></li>
+            <li><a style="font-weight:600 ;"href="/#layouts">LAYOUTS</a></li>
+            <li><a style="font-weight:600 ;"href="/#int1">DEVELOPER</a></li>
 
 
         </ul>
@@ -396,7 +396,7 @@
         </div>
 
     </section>
-    <section id="OVERVIEW" class="align-items-center sec-padding">
+    <section id="overview" class="align-items-center sec-padding">
         <div class="container">
             <div class="row desktopView" >
                 <div class="col-md-5 col-lg-5 d-flex">
@@ -2221,9 +2221,9 @@
                 <div class="footer-links fading-in">
                     <p>
                         Registered Trademarks © 2024 Royalti Real Estate Private Limited. All Rights Reserved. |
-                        <a href="#">Terms & Conditions</a> |
-                        <a href="#">Privacy Policy</a> |
-                        <a href="#">Cookies Policy</a>
+                        <a href="Terms-and-use.html">Terms & Conditions</a> |
+                        <a href="Privacy-Policy.html">Privacy Policy</a>
+            
                     </p>
                 </div>
             </div>
