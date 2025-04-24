@@ -59,9 +59,10 @@
         li {
             font-weight: 500;
         }
-        .amm{
-        margin-bottom:30px;
-    }
+
+        .amm {
+            margin-bottom: 30px;
+        }
 
         .introbase {
             padding: 0px !important;
@@ -73,6 +74,36 @@
             font-weight: 600;
         }
     </style>
+
+    <style>
+         @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(80px);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(80px);
+            transition: all 0.3s ease-out;
+        }
+
+        .fade-in-up.active {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+    
 
 </head>
 
@@ -341,11 +372,11 @@
                             </select>
                             <input type="text" name="Mobile" class="form-control input-group" placeholder="Mobile *"
                                 required>
-                                <input type="hidden" name="utm_source" id="utm_source">
-                                <input type="hidden" name="utm_medium" id="utm_medium">
-                                <input type="hidden" name="utm_campaign" id="utm_campaign">
-                                <input type="hidden" name="utm_term" id="utm_term">
-                                <input type="hidden" name="active_url" id="active_url">
+                            <input type="hidden" name="utm_source" id="utm_source">
+                            <input type="hidden" name="utm_medium" id="utm_medium">
+                            <input type="hidden" name="utm_campaign" id="utm_campaign">
+                            <input type="hidden" name="utm_term" id="utm_term">
+                            <input type="hidden" name="active_url" id="active_url">
 
 
                         </div>
@@ -372,23 +403,23 @@
 
 
     <section id="privacyPolicy" style="background-color:#f2f2f2;;">
-        <div class="container fading-in">
+        <div class="container fade-in-up">
             <div class="col-lg-12 col-xs-12 aboutcontent">
                 <div class="amm" style="margin-top:8%;">
-                    <span class=" introbase">PRIVACY POLICY</span>
+                    <span class=" introbase fade-in-up">PRIVACY POLICY</span>
                 </div>
-                <p class="privacyText">Royalti Real Estate Private Limited ("we," "our," or "us") is committed to
+                <p class="privacyText fade-in-up">Royalti Real Estate Private Limited ("we," "our," or "us") is committed to
                     protecting your privacy. This Privacy Policy explains how your personal information is collected,
                     used, and disclosed by Royalti Real Estate Private Limited.</p>
-                <p class="privacyText">This Privacy Policy applies to our website, and its associated subdomains
+                <p class="privacyText fade-in-up">This Privacy Policy applies to our website, and its associated subdomains
                     (collectively, our "Service") alongside our application, Royalti Real Estate Private Limited. By
                     accessing or using our Service, you signify that you have read, understood, and agree to our
                     collection, storage, use, and disclosure of your personal information as described in this Privacy
                     Policy and our Terms of Service.</p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <br>
                     <b>Definitions and Key Terms</b>
-                <p class="privacyText">To help explain things as clearly as possible in this Privacy Policy, every time
+                <p class="privacyText fade-in-up">To help explain things as clearly as possible in this Privacy Policy, every time
                     any of these terms are referenced, are strictly defined as:</p>
                 </p>
                 <ul id="bullets">
@@ -424,7 +455,7 @@
                     <li>You: a person or entity that is registered with Royalti Real Estate Private Limited to use the
                         Services.</li>
                 </ul>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>What Information Do We Collect?</b><br>
                     We collect information from you when you visit our website, register on our site, place an order,
                     subscribe to our newsletter, respond to a survey or fill out a form.
@@ -435,7 +466,7 @@
                     <li>Email Addresses</li>
                 </ul>
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>How Do We Use The Information We Collect?</b><br>
                     Any of the information we collect from you may be used in one of the following ways:
                     <br>
@@ -451,7 +482,7 @@
                     <li>To send periodic emails</li>
                 </ul>
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>When does Royalti Real Estate Private Limited use end user information from third
                         parties?</b><br>
                     Royalti Real Estate Private Limited will collect End User Data necessary to provide the Royalti Real
@@ -462,7 +493,7 @@
                     from the social media websites you have indicated. You can control how much of your information
                     social media websites make public by visiting these websites and changing your privacy settings.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>When does Royalti Real Estate Private Limited use customer information from third
                         parties?</b><br>
                     We receive some information from the third parties when you contact us. For example, when you submit
@@ -472,7 +503,7 @@
                     publicly available on social media websites. You can control how much of your information social
                     media websites make public by visiting these websites and changing your privacy settings.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>Do we share the information we collect with third parties?</b><br>
                     We may share the information that we collect, both personal and non-personal, with third parties
                     such as advertisers, contest sponsors, promotional and marketing partners, and others who provide
@@ -502,12 +533,12 @@
                     or stop any illegal, unethical, or legally actionable activity, or to otherwise comply with
                     applicable court orders, laws, rules and regulations.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>Where and when is information collected from customers and end users?</b><br><br>
                     Royalti Real Estate Private Limited will collect personal information that you submit to us. We may
                     also receive personal information about you from third parties as described above.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>How Do We Use Your Email Address?</b><br><br>
                     By submitting your email address on this website, you agree to receive emails from us. You can
                     cancel your participation in any of these email lists at any time by clicking on the opt-out link or
@@ -522,7 +553,7 @@
                     the purposes stated in this Policy. Note: If at any time you would like to unsubscribe from
                     receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>How Long Do We Keep Your Information?</b><br><br>
                     We keep your information only so long as we need it to provide Royalti Real Estate Private Limited
                     to you and fulfill the purposes described in this policy. This is also the case for anyone that we
@@ -742,7 +773,7 @@
                     or you would be required to enter your login details every time you visit the website as we would
                     not be able to remember that you had logged in previously.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>California Online Privacy Protection Act (CalOPPA)</b><br><br>
                     CalOPPA requires us to disclose categories of Personal Information we collect and how we use it, the
                     categories of sources from whom we collect Personal Information, and the third parties with whom we
@@ -764,11 +795,11 @@
                         personal data.</li>
                 </ul>
                 </p>
-                <p class="privacyText"><br>If you make a request, we have one month to respond to you. If you would like
+                <p class="privacyText fade-in-up"><br>If you make a request, we have one month to respond to you. If you would like
                     to exercise any of these rights, please contact us. We do not sell the Personal Information of our
                     users. For more information about these rights, please contact us.
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>Contact Us</b><br><br>
                     Don't hesitate to contact us if you have any questions.
                     <br>
@@ -783,7 +814,7 @@
         </div>
     </section>
 
-    <div id="footer"></div>
+    <div id="footer" class="fade-in-up"></div>
 
     <div class="mob-view">
         <div class="para-logo register-hover CTA-btn" data-bs-toggle="modal" data-bs-target="#registerModal"
@@ -795,68 +826,87 @@
         <div class="CTA-btn" data-bs-toggle="modal" data-bs-target="#registerModal" style="width: 50%; padding :5px"><i
                 class="fa-brands fa-whatsapp"></i><span style="margin-left: 5px;">WHATSAPP</span></div>
     </div>
-
-
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-    const navbarLinks = document.querySelector("#customNavbarLinks");
-    const menuToggle = document.querySelector("#customMenuToggle");
-    const animatedElements = document.querySelectorAll(".fading-in");
-
-
-    function closeNavbarOnScroll() {
-        if (navbarLinks.classList.contains("active")) {
-            navbarLinks.classList.remove("active");
-        }
-    }
-
-    menuToggle.addEventListener("click", function () {
-        navbarLinks.classList.toggle("active");
-    });
-
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+    <script>
+        const faders = document.querySelectorAll('.fade-in-up');
+      
+        const appearOptions = {
+          threshold: 0.1
+        };
+      
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // optional: run once
+          });
+        }, appearOptions);
+      
+        faders.forEach(fader => {
+          appearOnScroll.observe(fader);
         });
-    }, { threshold: 0.2 });
+      </script>
 
-    animatedElements.forEach((el) => observer.observe(el));
-    window.addEventListener("scroll", closeNavbarOnScroll);
-});
 
-function getURLParams() {
-        const params = {};
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-  
-        // Capture standard UTM parameters
-        params.utm_source = urlParams.get('utm_source') || '';
-        params.utm_medium = urlParams.get('utm_medium') || '';
-        params.utm_campaign = urlParams.get('utm_campaign') || '';
-        params.utm_term = urlParams.get('utm_term') || '';
-  
-        return params;
-      }
-  
-      // Populate form fields with UTM parameters
-      function populateUTMFields() {
-        const utmParams = getURLParams();
-  
-        document.getElementById('utm_source').value = utmParams.utm_source;
-        document.getElementById('utm_medium').value = utmParams.utm_medium;
-        document.getElementById('utm_campaign').value = utmParams.utm_campaign;
-        document.getElementById('utm_term').value = utmParams.utm_term;
-  
-        document.getElementById('active_url') = document.URL;
-      }
-  
-      // Run the function on page load
-      window.onload = populateUTMFields;
- </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const navbarLinks = document.querySelector("#customNavbarLinks");
+            const menuToggle = document.querySelector("#customMenuToggle");
+            const animatedElements = document.querySelectorAll(".fading-in");
+
+
+            function closeNavbarOnScroll() {
+                if (navbarLinks.classList.contains("active")) {
+                    navbarLinks.classList.remove("active");
+                }
+            }
+
+            menuToggle.addEventListener("click", function () {
+                navbarLinks.classList.toggle("active");
+            });
+
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            animatedElements.forEach((el) => observer.observe(el));
+            window.addEventListener("scroll", closeNavbarOnScroll);
+        });
+
+        function getURLParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            // Capture standard UTM parameters
+            params.utm_source = urlParams.get('utm_source') || '';
+            params.utm_medium = urlParams.get('utm_medium') || '';
+            params.utm_campaign = urlParams.get('utm_campaign') || '';
+            params.utm_term = urlParams.get('utm_term') || '';
+
+            return params;
+        }
+
+        // Populate form fields with UTM parameters
+        function populateUTMFields() {
+            const utmParams = getURLParams();
+
+            document.getElementById('utm_source').value = utmParams.utm_source;
+            document.getElementById('utm_medium').value = utmParams.utm_medium;
+            document.getElementById('utm_campaign').value = utmParams.utm_campaign;
+            document.getElementById('utm_term').value = utmParams.utm_term;
+
+            document.getElementById('active_url') = document.URL;
+        }
+
+        // Run the function on page load
+        window.onload = populateUTMFields;
+    </script>
 
 
 

@@ -74,6 +74,34 @@
             font-weight: 600;
         }
     </style>
+    <style>
+        @keyframes fadeInUp {
+           0% {
+               opacity: 0;
+               transform: translateY(80px);
+           }
+
+           50% {
+               opacity: 0.5;
+               transform: translateY(40px);
+           }
+
+           to {
+               opacity: 1;
+               transform: translateY(0);
+           }
+       }
+
+       .fade-in-up {
+           opacity: 0;
+           transform: translateY(80px);
+           transition: all 0.3s ease-out;
+       }
+
+       .fade-in-up.active {
+           animation: fadeInUp 0.8s ease-out forwards;
+       }
+   </style>
 </head>
 
 <body style="background-color:#f2f2f2;;">
@@ -375,17 +403,17 @@
         <div class="container">
             <div class="col-lg-12 col-xs-12 aboutcontent">
                 <div class="amm" style="margin-top:8%;">
-                    <span class=" introbase">
+                    <span class="introbase fade-in-up">
                         TERMS OF USE</span>
                 </div>
-                <p class="privacyText">Please read the following terms of use and disclaimers carefully before using
+                <p class="privacyText fade-in-up">Please read the following terms of use and disclaimers carefully before using
                     this web site.
 
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <br>
                     <b>Acceptance of Terms</b>
-                <p class="privacyText">To help explain things as clearly as possible in this Privacy Policy, every time
+                <p class="privacyText fade-in-up">To help explain things as clearly as possible in this Privacy Policy, every time
                     any of these terms are referenced, are strictly defined as:</p>
                 </p>
                 <ul id="bullets">
@@ -398,7 +426,7 @@
                         these Terms of Use. </li>
                     <li>However, if you do NOT agree to these Terms of Use, please DO NOT use this Site.</li>
                 </ul>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Disclaimers</b>
                 <ul>
                     <li>Other than as expressly set out in these terms, the website and its contents are provided on an
@@ -437,7 +465,7 @@
                         purposes only.</li>
                 </ul>
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Your Use of the Site
                     </b><br>
 
@@ -460,7 +488,7 @@
 
 
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Intellectual Property</b>
                 <ul>
                     <li>All content on this Site, including text, graphics, logos, images, and software, is the property
@@ -476,7 +504,7 @@
                         Mark displayed on the Site.</li>
                 </ul>
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
 
                     <b>Limitation of Liability</b>
                 <ul>
@@ -488,7 +516,7 @@
                         accuracy of results, or computer failure or malfunction.</li>
                 </ul>
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Indemnification</b>
                 <ul>
                     <li>You agree and acknowledge to defend, indemnify and hold Royalti Real Estate Private Limited and
@@ -498,7 +526,7 @@
                     </li>
                 </ul>
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Unsolicited Submissions (User Generated Content)</b>
                 <ul>
                     <li>Royalti Real Estate Private Limited does not accept or consider any creative ideas, suggestions
@@ -519,7 +547,7 @@
                         publicly perform, publicly display and distribute such Submissions.</li>
                 </ul>
                 </p>
-                <p class="privacyText"><br>
+                <p class="privacyText fade-in-up"><br>
                     <b>Third Party Links & Services</b>
                 <ul>
                     <li>As a convenience to users, this Site may link to other sites owned and operated by third parties
@@ -536,7 +564,7 @@
                 </ul>
                 <br>
 
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Forward-Looking Statements</b>
                 <ul>
                     <li>This Site may contain statements, estimates or projections that constitute "forward-looking
@@ -553,7 +581,7 @@
                 </ul>
                 </p>
 
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Modification of Site
 
                     </b>
@@ -569,7 +597,7 @@
                 </p>
 
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Governing Law
 
                     </b>
@@ -590,7 +618,7 @@
                 </ul>
 
                 </p>
-                <p class="privacyText">
+                <p class="privacyText fade-in-up">
                     <b>Acceptance of Being Contacted & Privacy Policy</b><br>
                 <ul>
                     <li>Registered customers on this website may receive updates on their mobile number / email id /
@@ -626,7 +654,7 @@
         </div>
     </section>
 
-    <div id="footer"></div>
+    <div id="footer" class="fade-in-up"></div>
 
     <div class="mob-view">
         <div class="para-logo register-hover CTA-btn" data-bs-toggle="modal" data-bs-target="#registerModal"
@@ -638,7 +666,25 @@
         <div class="CTA-btn" data-bs-toggle="modal" data-bs-target="#registerModal" style="width: 50%; padding :5px"><i
                 class="fa-brands fa-whatsapp"></i><span style="margin-left: 5px;">WHATSAPP</span></div>
     </div>
-
+    <script>
+        const faders = document.querySelectorAll('.fade-in-up');
+      
+        const appearOptions = {
+          threshold: 0.1
+        };
+      
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // optional: run once
+          });
+        }, appearOptions);
+      
+        faders.forEach(fader => {
+          appearOnScroll.observe(fader);
+        });
+      </script>
 
 
     <script>
