@@ -7,7 +7,8 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto+Slab|Roboto:300,400,500,700"
+        rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <link rel="stylesheet" href="./style/nav.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -56,13 +57,15 @@
 
 
                     </div>
- 
 
-                    <form action="register-form.php" method="POST" id="PopupForm" name="PopupForm" onsubmit="return validateForm();" >
+
+                    <form action="/send" method="POST" id="PopupForm" name="PopupForm"
+                        onsubmit="return validateForm();">
                         <input type="text" name="name" class="form-control input-group" placeholder="Name *" required>
-                        <input type="email" name="email" class="form-control input-group" placeholder="Email *" required>
+                        <input type="email" name="email" class="form-control input-group" placeholder="Email *"
+                            required>
                         <div class="d-flex gap-2">
-    
+
                             <select name="CountryCode" id="banner-cta-CountryCode"
                                 class="CountryCode form-control valid form-select" style="max-width: 120px;">
                                 <option value="">Enter Country Code</option>
@@ -286,16 +289,17 @@
                                     <option value="263">Zimbabwe (+263)</option>
                                 </optgroup>
                             </select>
-                            <input type="text" name="mobile" class="form-control input-group" placeholder="Mobile *" required>
-                            <input type="hidden" name="utm_source" id="utm_source" value>
-                            <input type="hidden" name="utm_medium" id="utm_medium" value>
-                            <input type="hidden" name="utm_campaign" id="utm_campaign" value>
-                            <input type="hidden" name="utm_term" id="utm_term" value>
-                            <input type="hidden" name="active_url" id="active_url" value>
-    
-                        
+                            <input type="text" name="mobile" class="form-control input-group" placeholder="Mobile *"
+                                required>
+                            <input type="hidden" name="utm_source" id="utm_source">
+                            <input type="hidden" name="utm_medium" id="utm_medium">
+                            <input type="hidden" name="utm_campaign" id="utm_campaign">
+                            <input type="hidden" name="utm_term" id="utm_term">
+                            <input type="hidden" name="active_url" id="active_url">
+
+
                         </div>
-    
+
                         <div class="vsmall input-checkbox" style="display: flex
                             ;
                                 flex-direction: row;
@@ -303,13 +307,13 @@
                             <input type="checkbox" name="agree" checked="" required>
                             <p>I agree to receive updates on Call, WhatsApp &amp; Email.</p>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button id="submit-access" type="submit" class="btn btn-primary">GET FULL ACCESS</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-access" type="submit" class="btn btn-primary">GET FULL ACCESS</button>
+                </div>
 
-                    </form>
-                 
+                </form>
+
             </div>
         </div>
     </div>
@@ -327,11 +331,11 @@
 
         <ul class="custom-navbar-links mx-auto" id="customNavbarLinks" style="font-size: 1vw;">
             <li><a style="font-weight:600 ;" href="/#overview">OVERVIEW</a></li>
-            <li><a style="font-weight:600 ;"href="/#location">LOCATION</a></li>
-            <li><a style="font-weight:600 ;"href="/#amenities">AMENITIES</a></li>
-            <li><a style="font-weight:600 ;"href="/#variants">VARIANTS</a></li>
-            <li><a style="font-weight:600 ;"href="/#layouts">LAYOUTS</a></li>
-            <li><a style="font-weight:600 ;"href="/#int1">DEVELOPER</a></li>
+            <li><a style="font-weight:600 ;" href="/#location">LOCATION</a></li>
+            <li><a style="font-weight:600 ;" href="/#amenities">AMENITIES</a></li>
+            <li><a style="font-weight:600 ;" href="/#variants">VARIANTS</a></li>
+            <li><a style="font-weight:600 ;" href="/#layouts">LAYOUTS</a></li>
+            <li><a style="font-weight:600 ;" href="/#int1">DEVELOPER</a></li>
 
 
         </ul>
@@ -357,13 +361,13 @@
         <div class="first-sec-info">
             <div class="ad-container px-2">
                 <div class="pre-launch">EXCLUSIVE PRE-LAUNCH</div>
-               
+
                 <div class="title">ASTERIA AT COURTYARD</div>
                 <div class="location">
-              
+
                     <p>Pokhran Road 2, Thane</p>
                 </div>
-         
+
                 <div class="features">
 
                     <div class="col-lg-3 col-xs-4 fadeInUp" style="padding-left:2%; padding-right:2%;">
@@ -380,15 +384,16 @@
                     </div>
 
                 </div>
-              
+
                 <div class="pricing">2, 3 & 4 Bed Residences<br>Starting 1.9Cr*</div>
-          
+
                 <span>
                     <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                         data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
                         style="visibility: visible; animation-name: fadeInUp;"> VIRTUAL TOUR <img
-                            src="./assets/virtualtour-icon.png" width="25" style="vertical-align: sub; width:25px !important; height:20px !important; transform: translate(0px, -1px);" alt="Asteria"
-                            class="changeicon"></a>
+                            src="./assets/virtualtour-icon.png" width="25"
+                            style="vertical-align: sub; width:25px !important; height:20px !important; transform: translate(0px, -1px);"
+                            alt="Asteria" class="changeicon"></a>
                 </span>
 
 
@@ -398,7 +403,7 @@
     </section>
     <section id="overview" class="align-items-center sec-padding">
         <div class="container">
-            <div class="row desktopView" >
+            <div class="row desktopView">
                 <div class="col-md-5 col-lg-5 d-flex">
                     <div class="info-container"
                         style="width:100%; height: 100%; display: flex; flex-direction: column; justify-content: center;align-items:start;padding-left:63px;">
@@ -416,7 +421,7 @@
                             <li>A Community of 1500 Elite Families</li>
                             <li>Lifestyle Choice For An Evolved Customer</li>
                         </ul>
-        
+
                         <span>
 
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
@@ -475,7 +480,8 @@
             </div>
             <div class="tabView align-items-center" style="width: 100%;">
                 <div class="col-sm-6 col-md-6 d-flex" style="justify-content: center;">
-                    <div  style="width: 100%; height: 400px; display: flex; flex-direction: column; justify-content: center;">
+                    <div
+                        style="width: 100%; height: 400px; display: flex; flex-direction: column; justify-content: center;">
                         <h2 class="sec2-heading fading-in"> OVERVIEW</h2>
                         <ul class="sec2-info fading-in" style="font-size: 14px !important;
                         color: #666666;
@@ -488,7 +494,7 @@
                             <li>A Community of 1500 Elite Families</li>
                             <li>Lifestyle Choice For An Evolved Customer</li>
                         </ul>
-                       
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -599,7 +605,7 @@
                             <li>A Community of 1500 Elite Families</li>
                             <li>Lifestyle Choice For An Evolved Customer</li>
                         </ul>
-                        
+
                         <span style="text-align: center;">
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -617,14 +623,14 @@
     </section>
     <section id="location" class="align-items-center sec-padding" style="background-color: #f2f2f2;">
         <div class="container">
-            <div class="row desktopView" >
+            <div class="row desktopView">
                 <div class="col-md-5 col-lg-5 d-flex">
                     <div class="info-container"
                         style="width:100%; height: 100%; display: flex; flex-direction: column; justify-content: center;align-items:start;padding-left:63px;">
                         <h1 class="sec2-heading section-headings fading-in"> LOCATION</h1>
 
 
-                        
+
                         <ul class="sec2-info fading-in" style="font-size: 18px;
                     color: #666666;
                     font-weight: 500;">
@@ -651,7 +657,7 @@
                             </li>
                         </ul>
 
-                      
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -665,7 +671,7 @@
                 <div class="col-md-7 col-lg-7 d-flex fading-in"
                     style="justify-content: space-around;padding-right:73px;">
                     <img src="./assets/location-img.png" class="img-fluid"
-                        style=" overflow: hidden;border-radius:12px; max-width: 600px; height: 460px;" >
+                        style=" overflow: hidden;border-radius:12px; max-width: 600px; height: 460px;">
                 </div>
 
             </div>
@@ -703,7 +709,7 @@
                                 </li>
                             </ul>
 
-                            
+
                             <span>
                                 <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                     data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -756,7 +762,7 @@
                             </li>
                         </ul>
 
-                     
+
                         <span style="text-align: center;">
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -771,7 +777,7 @@
     </section>
     <section id="apartments" class="align-items-center sec-padding">
         <div class="container">
-            <div class="row desktopView align-items-center justify-content-center" >
+            <div class="row desktopView align-items-center justify-content-center">
                 <div class="col-md-7 col-lg-7 col-sm-5  pr-md-2 d-flex  align-items-center"
                     style="height: 100%;justify-content: space-around;">
                     <div class="car-img-lCnt" style="padding-left: 50px; padding-right: 12px;">
@@ -837,7 +843,7 @@
                             </li>
                         </ul>
 
-                       
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -918,7 +924,7 @@
                             </li>
                         </ul>
 
-                        
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -999,7 +1005,7 @@
                             </li>
                         </ul>
 
-                        
+
                         <span style="text-align: center;">
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -1048,7 +1054,7 @@
                                 A 40-Seater Private Movie Theatre
                             </li>
                         </ul>
-                       
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -1159,7 +1165,7 @@
                                 A 40-Seater Private Movie Theatre
                             </li>
                         </ul>
-                        
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -1337,7 +1343,7 @@
                                 A 40-Seater Private Movie Theatre
                             </li>
                         </ul>
-                  
+
                         <span style="text-align: center;">
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -1378,28 +1384,32 @@
                             <td>830 Sqft</td>
                             <td>1.86 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
                             <td>3 BHK</td>
                             <td>1160 Sqft</td>
                             <td>2.70 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
                             <td>3 BHK</td>
                             <td>1307 Sqft</td>
                             <td>3.25 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
                             <td>4 BHK</td>
                             <td>1672 Sqft</td>
                             <td>3.99 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1422,28 +1432,32 @@
                             <td>850 Sqft</td>
                             <td>1.90 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
                             <td>3 BHK</td>
                             <td>1200 Sqft</td>
                             <td>2.80 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
                             <td>3 BHK</td>
                             <td>1350 Sqft</td>
                             <td>3.30 Cr</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                         <tr>
                             <td>4 BHK</td>
                             <td>1700 Sqft</td>
                             <td>Sold Out</td>
                             <td><a href="#" class="price-link" data-bs-toggle="modal"
-                                    data-bs-target="#registerModal">Price Breakup <i class="fa-solid fa-arrow-right"></i></a></td>
+                                    data-bs-target="#registerModal">Price Breakup <i
+                                        class="fa-solid fa-arrow-right"></i></a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1462,7 +1476,7 @@
                         <i class="fa-solid fa-indian-rupee-sign"></i>
                         <!-- <img src="./assets/rupee-icon.png" width="22" style="vertical-align: sub;" alt="Asteria"
                             class="changeicon"> -->
-                        </a>
+                    </a>
                 </span>
             </div>
 
@@ -1584,7 +1598,7 @@
             <div id="master-plan-cnt" class="carousel-container layout-plan mx-auto fading-in"
                 style="overflow: hidden;  max-width: 1200px; justify-content: space-evenly;">
                 <div class="img-plan-cnt">
-                    <img src="./assets/mas-plan.png"  alt="mas-plan">
+                    <img src="./assets/mas-plan.png" alt="mas-plan">
                     <div class="overlay"></div>
                     <button class="hover-btn" data-bs-toggle="modal" data-bs-target="#registerModal">VIEW PLANS</button>
                 </div>
@@ -1610,7 +1624,8 @@
                 <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                     data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
                     style="visibility: visible; animation-name: fadeInUp;">CURRENT STATUS
-                    <img src="./assets/current-status-logo.png" width="22" style="vertical-align: sub; transform: translate(0px, -1px);" alt="Asteria"
+                    <img src="./assets/current-status-logo.png" width="22"
+                        style="vertical-align: sub; transform: translate(0px, -1px);" alt="Asteria"
                         class="changeicon"></a>
             </span>
         </div>
@@ -1618,13 +1633,13 @@
 
     <section id="int1" class="align-items-center sec-padding" style="background-color: #f2f2f2;">
         <div class="container">
-            <div class="row desktopView align-items-center justify-content-center" >
+            <div class="row desktopView align-items-center justify-content-center">
                 <div class="col-md-5 col-lg-7 col-sm-5 col-xs-12 pr-md-2 d-flex  align-items-center"
                     style="height: 100%;justify-content: space-around;">
                     <div class="car-img-lCnt" style="padding-left: 73px; padding-right: 20px; ">
                         <div class="carousel slide fading-in"
                             style=" overflow: hidden;border-radius: 12px; max-width: 600px;">
-                            <div class="carousel-inner int1-img" >
+                            <div class="carousel-inner int1-img">
                                 <img src="./assets/intro1.png" style="border-radius: 14px;" class="d-block w-100"
                                     alt="huihui">
                             </div>
@@ -1658,7 +1673,7 @@
                             </li>
                         </ul>
 
-                        
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -1714,7 +1729,7 @@
                             </li>
                         </ul>
 
-                      
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -1801,7 +1816,7 @@
 
     <section id="int2" class="align-items-center sec-padding">
         <div class="container">
-            <div class="row desktopView" >
+            <div class="row desktopView">
                 <div class="col-md-5 col-lg-5 d-flex">
                     <div class="info-container"
                         style="width:100%; height: 100%; display: flex; flex-direction: column; justify-content: center;align-items:start;padding-left:63px;">
@@ -1829,7 +1844,7 @@
                                 100+ Multinational Corporate Clients
                             </li>
                         </ul>
-                        
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -1882,7 +1897,7 @@
                                 100+ Multinational Corporate Clients
                             </li>
                         </ul>
-                    
+
                         <span>
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover fading-in"
@@ -1952,7 +1967,7 @@
                             </li>
                         </ul>
 
-                       
+
                         <span style="text-align: center;">
                             <a href="#" data-animation="fadeInUp" data-animation-delay="500" data-bs-toggle="modal"
                                 data-bs-target="#registerModal" class="full-brochure fadeInUp register-hover"
@@ -2223,7 +2238,7 @@
                         Registered Trademarks © 2024 Royalti Real Estate Private Limited. All Rights Reserved. |
                         <a href="Terms-and-use.html">Terms & Conditions</a> |
                         <a href="Privacy-Policy.html">Privacy Policy</a>
-            
+
                     </p>
                 </div>
             </div>
@@ -2248,7 +2263,33 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script>
+        function getURLParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
 
+            params.utm_source = urlParams.get('utm_source') || '';
+            params.utm_medium = urlParams.get('utm_medium') || '';
+            params.utm_campaign = urlParams.get('utm_campaign') || '';
+            params.utm_term = urlParams.get('utm_term') || '';
+
+            return params;
+        }
+       
+        function populateUTMFields() {
+            const utmParams = getURLParams();
+
+            document.getElementById('utm_source').value = utmParams.utm_source;
+            document.getElementById('utm_medium').value = utmParams.utm_medium;
+            document.getElementById('utm_campaign').value = utmParams.utm_campaign;
+            document.getElementById('utm_term').value = utmParams.utm_term;
+
+            document.getElementById('active_url') = document.URL;
+        }
+
+        window.onload = populateUTMFields;
+    </script>
 
 
 </body>

@@ -109,7 +109,7 @@
                     </div>
 
 
-                    <form action="http://localhost:3000/submit-form" method="POST" id="PopupForm" name="PopupForm"
+                    <form action="/send" method="POST" id="PopupForm" name="PopupForm"
                         onsubmit="return validateForm();">
                         <input type="text" name="Name" class="form-control input-group" placeholder="Name *" required>
                         <input type="email" name="Email" class="form-control input-group" placeholder="Email *"
@@ -341,11 +341,11 @@
                             </select>
                             <input type="text" name="Mobile" class="form-control input-group" placeholder="Mobile *"
                                 required>
-                            <input type="hidden" name="utm_source" id="utm_source" value>
-                            <input type="hidden" name="utm_medium" id="utm_medium" value>
-                            <input type="hidden" name="utm_campaign" id="utm_campaign" value>
-                            <input type="hidden" name="utm_term" id="utm_term" value>
-                            <input type="hidden" name="active_url" id="active_url" value>
+                                <input type="hidden" name="utm_source" id="utm_source">
+                                <input type="hidden" name="utm_medium" id="utm_medium">
+                                <input type="hidden" name="utm_campaign" id="utm_campaign">
+                                <input type="hidden" name="utm_term" id="utm_term">
+                                <input type="hidden" name="active_url" id="active_url">
 
 
                         </div>
@@ -372,7 +372,7 @@
 
 
     <section id="privacyPolicy" style="background-color:#f2f2f2;;">
-        <div class="container">
+        <div class="container fading-in">
             <div class="col-lg-12 col-xs-12 aboutcontent">
                 <div class="amm" style="margin-top:8%;">
                     <span class=" introbase">PRIVACY POLICY</span>
@@ -797,7 +797,66 @@
     </div>
 
 
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
 
+    const navbarLinks = document.querySelector("#customNavbarLinks");
+    const menuToggle = document.querySelector("#customMenuToggle");
+    const animatedElements = document.querySelectorAll(".fading-in");
+
+
+    function closeNavbarOnScroll() {
+        if (navbarLinks.classList.contains("active")) {
+            navbarLinks.classList.remove("active");
+        }
+    }
+
+    menuToggle.addEventListener("click", function () {
+        navbarLinks.classList.toggle("active");
+    });
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    animatedElements.forEach((el) => observer.observe(el));
+    window.addEventListener("scroll", closeNavbarOnScroll);
+});
+
+function getURLParams() {
+        const params = {};
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+  
+        // Capture standard UTM parameters
+        params.utm_source = urlParams.get('utm_source') || '';
+        params.utm_medium = urlParams.get('utm_medium') || '';
+        params.utm_campaign = urlParams.get('utm_campaign') || '';
+        params.utm_term = urlParams.get('utm_term') || '';
+  
+        return params;
+      }
+  
+      // Populate form fields with UTM parameters
+      function populateUTMFields() {
+        const utmParams = getURLParams();
+  
+        document.getElementById('utm_source').value = utmParams.utm_source;
+        document.getElementById('utm_medium').value = utmParams.utm_medium;
+        document.getElementById('utm_campaign').value = utmParams.utm_campaign;
+        document.getElementById('utm_term').value = utmParams.utm_term;
+  
+        document.getElementById('active_url') = document.URL;
+      }
+  
+      // Run the function on page load
+      window.onload = populateUTMFields;
+ </script>
 
 
 

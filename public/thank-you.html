@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./style/firstSection.css" />
     <link rel="stylesheet" href="./style/registerModal.css" />
     <link rel="stylesheet" href="./style/index.css" />
-    
+
     <link rel="stylesheet" href="./style/footer.css" />
     <!-- <script src="./js/index.js" defer></script> -->
     <script>
@@ -59,9 +59,10 @@
         li {
             font-weight: 500;
         }
-        .amm{
-        margin-bottom:30px;
-    }
+
+        .amm {
+            margin-bottom: 30px;
+        }
 
         .introbase {
             padding: 0px !important;
@@ -109,7 +110,7 @@
                     </div>
 
 
-                    <form action="http://localhost:3000/submit-form" method="POST" id="PopupForm" name="PopupForm"
+                    <form action="/send" method="POST" id="PopupForm" name="PopupForm"
                         onsubmit="return validateForm();">
                         <input type="text" name="Name" class="form-control input-group" placeholder="Name *" required>
                         <input type="email" name="Email" class="form-control input-group" placeholder="Email *"
@@ -341,11 +342,11 @@
                             </select>
                             <input type="text" name="Mobile" class="form-control input-group" placeholder="Mobile *"
                                 required>
-                            <input type="hidden" name="utm_source" id="utm_source" value>
-                            <input type="hidden" name="utm_medium" id="utm_medium" value>
-                            <input type="hidden" name="utm_campaign" id="utm_campaign" value>
-                            <input type="hidden" name="utm_term" id="utm_term" value>
-                            <input type="hidden" name="active_url" id="active_url" value>
+                            <input type="hidden" name="utm_source" id="utm_source">
+                            <input type="hidden" name="utm_medium" id="utm_medium">
+                            <input type="hidden" name="utm_campaign" id="utm_campaign">
+                            <input type="hidden" name="utm_term" id="utm_term">
+                            <input type="hidden" name="active_url" id="active_url">
 
 
                         </div>
@@ -370,8 +371,8 @@
 
     <div id="header"></div>
 
-  
-    <section id="overview" style="background-color: #fff;height:541px;" >
+
+    <section id="overview" style="background-color: #fff;height:541px;">
         <div class="container">
             <div class="row" id="success">
 
@@ -379,17 +380,18 @@
                     <div class="mmp" style="margin-top:8%;">
                         <span style="color:#666666; font-size:33pt;">THANK YOU!</h2>
                     </div>
-                <p style="color:#666666; font-size:20pt;">You will receive the requested details over the email & whatsapp in the next few minutes.</p>
-                <p>
-                <br>
-                <a href="index.html" style="text-decoration: none; color:#666666; font-size:33pt;">GO BACK</a>
-                </p>
+                    <p style="color:#666666; font-size:20pt;">You will receive the requested details over the email &
+                        whatsapp in the next few minutes.</p>
+                    <p>
+                        <br>
+                        <a href="index.html" style="text-decoration: none; color:#666666; font-size:33pt;">GO BACK</a>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-     <div style="position:fixed; bottom:0;" id="footer"></div>
+    <div style="position:fixed; bottom:0;" id="footer"></div>
 
     <div class="mob-view">
         <div class="para-logo register-hover CTA-btn" data-bs-toggle="modal" data-bs-target="#registerModal"
@@ -402,9 +404,68 @@
                 class="fa-brands fa-whatsapp"></i><span style="margin-left: 5px;">WHATSAPP</span></div>
     </div>
 
-   
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const navbarLinks = document.querySelector("#customNavbarLinks");
+            const menuToggle = document.querySelector("#customMenuToggle");
+            const animatedElements = document.querySelectorAll(".fading-in");
+
+
+            function closeNavbarOnScroll() {
+                if (navbarLinks.classList.contains("active")) {
+                    navbarLinks.classList.remove("active");
+                }
+            }
+
+            menuToggle.addEventListener("click", function () {
+                navbarLinks.classList.toggle("active");
+            });
+
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            animatedElements.forEach((el) => observer.observe(el));
+            window.addEventListener("scroll", closeNavbarOnScroll);
+        });
+
+        function getURLParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            // Capture standard UTM parameters
+            params.utm_source = urlParams.get('utm_source') || '';
+            params.utm_medium = urlParams.get('utm_medium') || '';
+            params.utm_campaign = urlParams.get('utm_campaign') || '';
+            params.utm_term = urlParams.get('utm_term') || '';
+
+            return params;
+        }
+
+        // Populate form fields with UTM parameters
+        function populateUTMFields() {
+            const utmParams = getURLParams();
+
+            document.getElementById('utm_source').value = utmParams.utm_source;
+            document.getElementById('utm_medium').value = utmParams.utm_medium;
+            document.getElementById('utm_campaign').value = utmParams.utm_campaign;
+            document.getElementById('utm_term').value = utmParams.utm_term;
+
+            document.getElementById('active_url') = document.URL;
+        }
+
+        // Run the function on page load
+        window.onload = populateUTMFields;
+    </script>
 
 
 </body>
